@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Probabilidad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Tipos de Probabilidad</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">Tipos de Probabilidad</h4>
+        <p>
+            Existen varios enfoques para calcular y entender la probabilidad. A continuación, exploramos los principales tipos:
+        </p>
+
+        <!-- Probabilidad Clásica -->
+        <h5 class="fw-semibold mt-4">1. Probabilidad Clásica</h5>
+        <p>
+            La <strong>probabilidad clásica</strong> es la forma más simple de calcular la probabilidad y se basa en la 
+            suposición de que todos los resultados posibles de un experimento aleatorio son igualmente probables. Se usa 
+            principalmente cuando el número total de resultados posibles es conocido y finito.
+        </p>
+        <p><b>P(A) = casos favorables / casos posibles</b></p>
+        <p class="text-secondary">
+            Ejemplo: Si lanzamos un dado, la probabilidad de obtener un 3 es igual a 1/6, ya que el dado tiene 6 caras 
+            y solo una de ellas muestra el número 3.
+        </p>
+
+        <!-- Probabilidad Frecuencial -->
+        <h5 class="fw-semibold mt-4">2. Probabilidad Frecuencial</h5>
+        <p>
+            La <strong>probabilidad frecuencial</strong> se basa en la observación empírica de cuántas veces ocurre un 
+            evento en un número determinado de repeticiones del experimento. Este enfoque es especialmente útil cuando 
+            el número de posibles resultados no es fijo, o cuando no se tiene información sobre todas las opciones posibles.
+        </p>
+        <p><b>P(A) = número de veces que ocurre A / número total de repeticiones</b></p>
+        <p class="text-secondary">
+            Ejemplo: Si lanzamos una moneda 100 veces y obtenemos 52 caras, la probabilidad de obtener cara sería 
+            52/100 = 0.52.
+        </p>
+
+        <!-- Probabilidad Subjetiva -->
+        <h5 class="fw-semibold mt-4">3. Probabilidad Subjetiva</h5>
+        <p>
+            La <strong>probabilidad subjetiva</strong> se refiere a la estimación personal de la probabilidad de que 
+            ocurra un evento, basada en la experiencia, intuición o conocimiento previo, en lugar de un cálculo formal. 
+            Es común en situaciones donde no es posible realizar experimentos repetidos, pero se tiene información parcial.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Un experto en fútbol podría estimar subjetivamente que un equipo tiene un 70% de probabilidades de 
+            ganar un partido, basándose en su rendimiento previo y otros factores como las condiciones del partido.
+        </p>
+
+        <!-- Probabilidad Condicional -->
+        <h5 class="fw-semibold mt-4">4. Probabilidad Condicional</h5>
+        <p>
+            La <strong>probabilidad condicional</strong> se refiere a la probabilidad de que ocurra un evento A dado que 
+            ya ha ocurrido otro evento B. Este tipo de probabilidad es crucial cuando los eventos no son independientes, 
+            y se utiliza para ajustar nuestras predicciones en función de información adicional.
+        </p>
+        <p><b>P(A | B) = P(A ∩ B) / P(B)</b></p>
+        <p class="text-secondary">
+            Ejemplo: Si sabemos que ha llovido los últimos tres días, ¿cuál es la probabilidad de que llueva mañana? 
+            Esta es una probabilidad condicional, ya que depende de los eventos previos (la lluvia de los días anteriores).
+        </p>
+
+        <!-- Probabilidad Total -->
+        <h5 class="fw-semibold mt-4">5. Probabilidad Total</h5>
+        <p>
+            La <strong>probabilidad total</strong> se utiliza cuando se trata de varios eventos mutuamente excluyentes, y 
+            nos ayuda a calcular la probabilidad de un evento en función de los eventos posibles que lo componen.
+        </p>
+        <p><b>P(A) = P(A | B1)P(B1) + P(A | B2)P(B2) + ... + P(A | Bn)P(Bn)</b></p>
+        <p class="text-secondary">
+            Ejemplo: Al calcular la probabilidad de que un paciente tenga una enfermedad, podemos considerar diferentes 
+            métodos de diagnóstico, cada uno con una probabilidad asociada, y combinar estas probabilidades para obtener 
+            una probabilidad total.
+        </p>
+
+        <!-- Video Principal -->
+        <div class="video-section my-4">
+            <h4>Explicación visual</h4>
+            <p>
+                Este video ofrece una introducción clara sobre qué es la probabilidad, su importancia y cómo se aplica en 
+                diversas situaciones. Ideal para comprender los fundamentos de la probabilidad de manera rápida.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=W72vfdbcVks" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

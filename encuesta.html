@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuestas – Estadística & Probabilidad 2025</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+/* ANIMACIONES SCROLL – ENCUESTAS*/
+
+.scroll,
+.scroll-text,
+.scroll-left,
+.scroll-right,
+.scroll-zoom {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+/* Desde abajo */
+.scroll {
+    transform: translateY(40px);
+}
+.scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Textos */
+.scroll-text {
+    transform: translateY(25px);
+}
+.scroll-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Izquierda / Derecha */
+.scroll-left {
+    transform: translateX(-50px);
+}
+.scroll-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-right {
+    transform: translateX(50px);
+}
+.scroll-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom */
+.scroll-zoom {
+    transform: scale(0.95);
+}
+.scroll-zoom.show {
+    opacity: 1;
+    transform: scale(1);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =NAVBAR GLOBAL – BLANCO PROFESIONAL-->
+<nav class="navbar navbar-expand-lg nav-blur border-bottom sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fa-solid fa-chart-column me-2" style="color: var(--accent);"></i>
+            Estadística & Probabilidad – 2025
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Sobre el Proyecto</a></li>
+                <li class="nav-item"><a class="nav-link" href="modulos.html">Conceptos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="encuesta.html">Encuestas</a></li>
+                <li class="nav-item"><a class="nav-link" href="datos.html">Data Internet</a></li>
+                <li class="nav-item"><a class="nav-link" href="base_datos.html">Data Encuesta</a></li>
+                <li class="nav-item"><a class="nav-link" href="analisis.html">Análisis</a></li>
+                <li class="nav-item"><a class="nav-link" href="referencia.html">Referencias</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- TITULO PRINCIPAL-->
+<section class="container py-5 scroll">
+
+    <h1 class="fw-bold text-center mb-3" style="color: var(--accent-dark);">
+        Encuestas Oficiales del Semestre
+    </h1>
+
+    <p class="text-secondary text-center fs-5 mb-4 scroll-text" style="max-width: 780px; margin: auto;">
+        Estas son las <b>tres encuestas oficiales</b> elaboradas durante el curso de 
+        <b>Probabilidad y Estadística – 2025</b>.  
+        Cada formulario aplica conceptos como <b>población, muestra, variables,
+        muestreo y análisis estadístico</b>.
+    </p>
+
+    <hr class="my-5">
+
+<!--ENCUESTA 1 — INTERNET EN LA VIDA ACADÉMICA-->
+<div class="mb-5 scroll scroll-zoom">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold" style="color: var(--accent-dark);">
+                <i class="fa-solid fa-wifi me-2"></i> Encuesta 1: Internet en la Vida Académica
+            </h2>
+
+            <button class="btn btn-outline-green btn-sm" onclick="exportarEncuestaIndividual(1)">
+                <i class="fas fa-download me-1"></i> Exportar
+            </button>
+        </div>
+
+        <form id="encuesta1" class="content-box">
+
+            <!-- DATOS GENERALES -->
+            <h4 class="title-underline mb-3">Datos Generales</h4>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Correo electrónico *</label>
+                    <input type="email" class="form-control" name="correo" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">¿Desea participar? *</label>
+                    <select class="form-control" name="participa" required>
+                        <option value="">Seleccione</option>
+                        <option>Sí</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- SOCIODEMOGRÁFICO -->
+            <h4 class="title-underline mb-3">Sociodemográfico</h4>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Edad *</label>
+                    <input type="number" class="form-control" name="edad" required min="10" max="100">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Provincia *</label>
+                    <select class="form-control" name="provincia" required>
+                        <option value="">Seleccione</option>
+                        <option>Bocas del Toro</option><option>Coclé</option><option>Colón</option>
+                        <option>Chiriquí</option><option>Herrera</option><option>Los Santos</option>
+                        <option>Panamá</option><option>Panamá Oeste</option><option>Veraguas</option>
+                        <option>Guna Yala</option><option>Emberá</option><option>Ngäbe-Buglé</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Género *</label>
+                    <select class="form-control" name="genero" required>
+                        <option value="">Seleccione</option>
+                        <option>Masculino</option><option>Femenino</option><option>Otro</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- USO DEL INTERNET -->
+            <h4 class="title-underline mb-3">Uso del Internet</h4>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Frecuencia (1–5) *</label>
+                    <select class="form-control" name="frecuencia" required>
+                        <option value="">Seleccione</option>
+                        <option>1</option><option>2</option><option>3</option>
+                        <option>4</option><option>5</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Horas al día *</label>
+                    <input type="number" class="form-control" name="horas" required min="0" max="24">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Revisiones del celular *</label>
+                    <select class="form-control" name="notificaciones" required>
+                        <option value="">Seleccione</option>
+                        <option>1 a 5</option><option>6 a 10</option>
+                        <option>11 a 20</option><option>Más de 20</option>
+                        <option>Nunca</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- PERCEPCIONES -->
+            <h4 class="title-underline mb-3">Percepciones</h4>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Seguridad (1–5) *</label>
+                    <select class="form-control" name="seguridad" required>
+                        <option value="">Seleccione</option>
+                        <option>1</option><option>2</option><option>3</option>
+                        <option>4</option><option>5</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Dependencia (1–5) *</label>
+                    <select class="form-control" name="dependencia" required>
+                        <option value="">Seleccione</option>
+                        <option>1</option><option>2</option><option>3</option>
+                        <option>4</option><option>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <small class="text-secondary">
+                    <i class="fas fa-save me-1"></i> Guardado automático
+                </small>
+                <button type="button" class="btn btn-green" onclick="guardarEncuesta1()">
+                    <i class="fas fa-paper-plane me-1"></i> Enviar respuesta
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <hr class="my-5">
+<!-- ENCUESTA 2 — USO DE INTELIGENCIA ARTIFICIAL-->
+<div class="mb-5 scroll scroll-zoom">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold" style="color: var(--accent-dark);">
+            <i class="fa-solid fa-robot me-2"></i>
+            Encuesta 2: Uso de Inteligencia Artificial en Proyectos Estudiantiles
+        </h2>
+
+        <button class="btn btn-outline-green btn-sm" onclick="exportarEncuestaIndividual(2)">
+            <i class="fas fa-download me-1"></i> Exportar
+        </button>
+    </div>
+
+    <form id="encuesta2" class="content-box">
+
+        <div class="row g-3">
+
+            <!-- Uso de IA -->
+            <div class="col-md-6">
+                <label class="form-label">1. ¿Has usado o conoces herramientas de IA? *</label>
+                <select class="form-control" name="ia_uso" required>
+                    <option value="">Seleccione</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <!-- Frecuencia -->
+            <div class="col-md-6">
+                <label class="form-label">2. Frecuencia de uso *</label>
+                <select class="form-control" name="ia_frecuencia" required>
+                    <option value="">Seleccione</option>
+                    <option>Nunca</option>
+                    <option>Rara vez</option>
+                    <option>A veces</option>
+                    <option>Frecuentemente</option>
+                    <option>Siempre</option>
+                </select>
+            </div>
+
+            <!-- Actividades -->
+            <div class="col-md-6">
+                <label class="form-label">3. Actividad principal realizada con IA *</label>
+                <select class="form-control" name="ia_actividades" required>
+                    <option value="">Seleccione</option>
+                    <option>Redacción de trabajos</option>
+                    <option>Programación</option>
+                    <option>Búsqueda de información</option>
+                    <option>Presentaciones</option>
+                    <option>Resolución de ejercicios</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <!-- Utilidad -->
+            <div class="col-md-6">
+                <label class="form-label">4. Utilidad percibida (1–5) *</label>
+                <select class="form-control" name="ia_utilidad" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+
+            <!-- Beneficios -->
+            <div class="col-md-6">
+                <label class="form-label">5. Beneficio principal *</label>
+                <select class="form-control" name="ia_beneficios" required>
+                    <option value="">Seleccione</option>
+                    <option>Ahorro de tiempo</option>
+                    <option>Mayor productividad</option>
+                    <option>Creatividad</option>
+                    <option>Aprendizaje más rápido</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <!-- Preocupaciones -->
+            <div class="col-md-6">
+                <label class="form-label">6. Preocupación principal *</label>
+                <select class="form-control" name="ia_preocupaciones" required>
+                    <option value="">Seleccione</option>
+                    <option>Plagio</option>
+                    <option>Desinformación</option>
+                    <option>Dependencia</option>
+                    <option>Ética</option>
+                    <option>Ninguna</option>
+                </select>
+            </div>
+
+            <!-- Confianza -->
+            <div class="col-md-6">
+                <label class="form-label">7. Nivel de confianza en la IA *</label>
+                <select class="form-control" name="ia_confianza" required>
+                    <option value="">Seleccione</option>
+                    <option>Muy confiable</option>
+                    <option>Algo confiable</option>
+                    <option>Neutral</option>
+                    <option>Poco confiable</option>
+                    <option>Nada confiable</option>
+                </select>
+            </div>
+
+            <!-- Profesor -->
+            <div class="col-md-6">
+                <label class="form-label">8. ¿Algún profesor explicó reglas sobre IA? *</label>
+                <select class="form-control" name="ia_profesor" required>
+                    <option value="">Seleccione</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <!-- Amenaza -->
+            <div class="col-md-6">
+                <label class="form-label">9. ¿Crees que la IA amenaza trabajos futuros? *</label>
+                <select class="form-control" name="ia_amenaza" required>
+                    <option value="">Seleccione</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                    <option>No estoy seguro</option>
+                </select>
+            </div>
+
+            <!-- Opinión abierta -->
+            <div class="col-12">
+                <label class="form-label">10. Opinión abierta (opcional)</label>
+                <textarea class="form-control" name="ia_opinion" rows="3"></textarea>
+            </div>
+        </div>
+
+        <!-- Botón -->
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <small class="text-secondary"><i class="fas fa-save me-1"></i> Guardado automático</small>
+            <button type="button" class="btn btn-green" onclick="guardarEncuesta2()">
+                <i class="fas fa-paper-plane me-1"></i> Enviar respuesta
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<hr class="my-5">
+<!-- ENCUESTA 3 — COMPUTACIÓN CUÁNTICA -->
+<div class="mb-5 scroll scroll-zoom">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold" style="color: var(--accent-dark);">
+            <i class="fa-solid fa-atom me-2"></i> Encuesta 3: Computación Cuántica
+        </h2>
+
+        <button class="btn btn-outline-green btn-sm" onclick="exportarEncuestaIndividual(3)">
+            <i class="fas fa-download me-1"></i> Exportar
+        </button>
+    </div>
+
+    <form id="encuesta3" class="content-box">
+
+        <!-- CONSENTIMIENTO -->
+        <h4 class="title-underline mb-3">Consentimiento</h4>
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Correo electrónico *</label>
+                <input type="email" class="form-control" name="correo_cuantica" required>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">¿Acepta participar? *</label>
+                <select class="form-control" name="consentimiento_cuantica" required>
+                    <option value="">Seleccione</option>
+                    <option>Sí, acepto participar</option>
+                    <option>No acepto participar</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- FILTRO UNIVERSIDAD -->
+        <h4 class="title-underline mb-3">Filtro 1 – Universidad</h4>
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">¿Estudia en la UTP? *</label>
+                <select class="form-control" name="utp" required>
+                    <option value="">Seleccione</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- FILTRO FACULTAD -->
+        <h4 class="title-underline mb-3">Filtro 2 – Facultad</h4>
+
+        <div class="mb-3">
+            <label class="form-label">Facultad *</label>
+            <select class="form-control" name="facultad" required>
+                <option value="">Seleccione</option>
+                <option>Ingeniería de Sistemas</option>
+                <option>Ingeniería Eléctrica</option>
+                <option>Ciencias y Tecnología</option>
+                <option>Ingeniería Civil</option>
+                <option>Ingeniería Industrial</option>
+                <option>Ingeniería Mecánica</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <!-- ENCUESTADOR -->
+        <h4 class="title-underline mb-3">Encuestador</h4>
+
+        <div class="mb-3">
+            <label class="form-label">¿Quién realizó la encuesta? *</label>
+            <select class="form-control" name="encuestador" required>
+                <option value="">Seleccione</option>
+                <option>Jade Gutiérrez</option>
+                <option>Jean Carlos Guillén</option>
+                <option>Juan Diego Hernández</option>
+                <option>Luis Lee</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <!-- SOCIODEMOGRÁFICO -->
+        <h4 class="title-underline mb-3">Sociodemográfico</h4>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Género *</label>
+                <select class="form-control" name="genero_cuantica" required>
+                    <option value="">Seleccione</option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>Prefiero no decirlo</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Edad *</label>
+                <input type="number" class="form-control" name="edad_cuantica" required min="10">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Provincia *</label>
+                <select class="form-control" name="provincia_cuantica" required>
+                    <option value="">Seleccione</option>
+                    <option>Panamá</option><option>Colón</option><option>Panamá Oeste</option>
+                    <option>Chiriquí</option><option>Bocas del Toro</option><option>Coclé</option>
+                    <option>Herrera</option><option>Los Santos</option><option>Veraguas</option>
+                    <option>Darién</option><option>Guna Yala</option><option>Ngäbe-Buglé</option>
+                    <option>Emberá-Wounaan</option><option>Naso Tjër Di</option>
+                    <option>Guna de Madugandí</option><option>Guna de Wargandí</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label class="form-label">Carrera *</label>
+            <select class="form-control" name="carrera_cuantica" required>
+                <option value="">Seleccione</option>
+                <option>Ingeniería en Sistemas</option>
+                <option>Ingeniería de Software</option>
+                <option>Computación</option>
+                <option>Ciberseguridad</option>
+                <option>Redes Informáticas</option>
+                <option>Informática Educativa</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <!-- CONOCIMIENTO -->
+        <h4 class="title-underline mb-3">Conocimientos Generales</h4>
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <label class="form-label">¿Has escuchado el término? *</label>
+                <select class="form-control" name="escuchado" required>
+                    <option value="">Seleccione</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">¿Dónde lo escuchaste? *</label>
+                <select class="form-control" name="donde" required>
+                    <option value="">Seleccione</option>
+                    <option>Universidad</option>
+                    <option>Redes sociales</option>
+                    <option>Otros medios</option>
+                    <option>Cursos</option>
+                    <option>Interés propio</option>
+                    <option>En esta encuesta</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Nivel de conocimiento (1–5) *</label>
+                <select class="form-control" name="nivel_conocimiento" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Familiaridad con principios cuánticos (1–5) *</label>
+                <select class="form-control" name="familiaridad" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Horas de estudio</label>
+                <input type="number" class="form-control" name="horas_estudio" min="0">
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- INTERÉS -->
+        <h4 class="title-underline mb-3">Interés</h4>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Cursos o talleres tomados *</label>
+                <input type="number" class="form-control" name="cursos" min="0" required>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Interés en aprender (1–5) *</label>
+                <select class="form-control" name="interes_aprender" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Interés en proyectos cuánticos (1–5) *</label>
+                <select class="form-control" name="interes_proyectos" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">Área de mayor interés *</label>
+                <select class="form-control" name="aspecto_interes" required>
+                    <option value="">Seleccione</option>
+                    <option>Programación cuántica</option>
+                    <option>Hardware cuántico</option>
+                    <option>Física teórica</option>
+                    <option>Aplicaciones industriales</option>
+                    <option>Educación / divulgación</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Tiempo semanal disponible</label>
+                <select class="form-control" name="tiempo_semanal">
+                    <option>Menos de 1 hora</option>
+                    <option>1–3 horas</option>
+                    <option>4–6 horas</option>
+                    <option>7–10 horas</option>
+                    <option>Más de 10 horas</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Participación en actividades tecnológicas *</label>
+                <input type="number" class="form-control" name="actividades_tec" min="0" required>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- PERCEPCIONES -->
+        <h4 class="title-underline mb-3">Percepción y Opiniones</h4>
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <label class="form-label">Impacto futuro (1–10) *</label>
+                <select class="form-control" name="impacto" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Accesibilidad del aprendizaje cuántico en Panamá *</label>
+                <select class="form-control" name="accesibilidad" required>
+                    <option value="">Seleccione</option>
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Integración en universidades *</label>
+                <select class="form-control" name="integracion" required>
+                    <option value="">Seleccione</option>
+                    <option>Es prematuro</option>
+                    <option>Es el momento adecuado</option>
+                    <option>Es urgente implementarlo</option>
+                    <option>No es necesario</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Beneficios para Panamá *</label>
+                <select class="form-control" name="beneficios" required>
+                    <option value="">Seleccione</option>
+                    <option>Innovación tecnológica</option>
+                    <option>Mejor educación universitaria</option>
+                    <option>Atraer inversión extranjera</option>
+                    <option>Crear nuevas industrias</option>
+                    <option>Generar empleos especializados</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Inversión mensual en formación</label>
+                <input type="number" class="form-control" name="inversion" min="0">
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">Desafío principal *</label>
+                <select class="form-control" name="desafios" required>
+                    <option value="">Seleccione</option>
+                    <option>Falta de personal capacitado</option>
+                    <option>Escasez de recursos tecnológicos</option>
+                    <option>Bajo interés estudiantil</option>
+                    <option>Planes de estudio limitados</option>
+                    <option>Altos costos de implementación</option>
+                    <option>Desconocimiento general</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Botón final -->
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <small class="text-secondary"><i class="fas fa-save me-1"></i> Guardado automático</small>
+            <button type="button" class="btn btn-green" onclick="guardarEncuesta3()">
+                <i class="fas fa-paper-plane me-1"></i> Enviar respuesta
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<hr class="my-5">
+
+<!-- EXPORTACIÓN GENERAL-->
+<div class="content-box text-center mb-5 scroll">
+    <h3 class="fw-bold mb-3" style="color: var(--accent-dark);">
+        <i class="fas fa-file-export me-2"></i> Exportar Respuestas
+    </h3>
+
+    <p class="text-secondary mb-4">Descarga todos los datos recopilados en formato Excel.</p>
+
+    <button class="btn btn-green btn-lg mb-3" onclick="exportarAExcel()">
+        <i class="fas fa-file-excel me-2"></i> Exportar todas las encuestas
+    </button>
+
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <button class="btn btn-outline-green" onclick="exportarEncuestaIndividual(1)">
+            <i class="fas fa-wifi me-1"></i> Encuesta 1
+        </button>
+        <button class="btn btn-outline-green" onclick="exportarEncuestaIndividual(2)">
+            <i class="fas fa-robot me-1"></i> Encuesta 2
+        </button>
+        <button class="btn btn-outline-green" onclick="exportarEncuestaIndividual(3)">
+            <i class="fas fa-atom me-1"></i> Encuesta 3
+        </button>
+    </div>
+
+    <small class="text-secondary d-block">
+        <i class="fas fa-info-circle me-1"></i> Las respuestas se guardan automáticamente en tu navegador.
+    </small>
+</div>
+
+<!-- PANEL ADMINISTRATIVO-->
+<div class="content-box text-center mb-5 scroll">
+    <h4 class="fw-bold mb-3" style="color: var(--accent-dark);">
+        <i class="fas fa-cogs me-2"></i> Administración Avanzada
+    </h4>
+
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-outline-green" onclick="mostrarPanelAdministracion()">
+            <i class="fas fa-database me-1"></i> Panel de administración
+        </button>
+
+        <button class="btn btn-outline-green" onclick="mostrarDetallesRespuestas()">
+            <i class="fas fa-eye me-1"></i> Ver detalles
+        </button>
+
+        <button class="btn btn-outline-green" onclick="limpiarTodasLasRespuestas()">
+            <i class="fas fa-trash me-1"></i> Limpiar datos
+        </button>
+    </div>
+</div>
+
+<!-- PANEL ADMIN DINÁMICO -->
+<div id="panel-admin-container" class="content-box mb-5 scroll" style="display:none;">
+    <h4 class="fw-bold mb-3" style="color: var(--accent-dark);">
+        <i class="fas fa-database me-2"></i> Panel Administrativo
+    </h4>
+
+    <div id="panel-admin-contenido"></div>
+</div>
+
+
+</section>
+
+<!-- FOOTER-->
+<footer class="text-center py-4" style="background: var(--bg-light-alt); border-top: 1px solid var(--border-color);">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+    <p class="small text-secondary">Universidad de Panamá — II Semestre</p>
+</footer>
+
+<!-- SCRIPTS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<script src="assets/js/almacenamiento.js"></script>
+<script src="assets/js/encuesta.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(
+        ".scroll, .scroll-text, .scroll-left, .scroll-right, .scroll-zoom"
+    ).forEach(el => observer.observe(el));
+
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a la Probabilidad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Introducción a la Probabilidad</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Definición de la Probabilidad -->
+        <h4 class="fw-semibold mt-4">¿Qué es la Probabilidad?</h4>
+        <p>
+            La <strong>probabilidad</strong> es una rama de las matemáticas que estudia el comportamiento del azar y cuantifica qué tan probable es que ocurra un evento específico. Su propósito es medir la incertidumbre y ayudarnos a predecir los resultados de situaciones aleatorias.
+        </p>
+
+        <h5 class="fw-semibold mt-4">Conceptos Clave</h5>
+        <ul>
+            <li><strong>Experimento aleatorio:</strong> Es un experimento cuyo resultado no puede predecirse con certeza antes de realizarlo. Ejemplos incluyen lanzar una moneda, tirar un dado o seleccionar una carta de una baraja.</li>
+            <li><strong>Suceso o Evento:</strong> Es un resultado o conjunto de resultados posibles de un experimento aleatorio. Por ejemplo, obtener "cara" al lanzar una moneda.</li>
+            <li><strong>Espacio Muestral (S):</strong> Es el conjunto de todos los resultados posibles de un experimento aleatorio. Por ejemplo, el espacio muestral de un dado es {1, 2, 3, 4, 5, 6}.</li>
+        </ul>
+
+        <!-- Definición Básica de Probabilidad -->
+        <h5 class="fw-semibold mt-4">Definición Básica de Probabilidad</h5>
+        <p>
+            La probabilidad de un evento se calcula con la siguiente fórmula:
+        </p>
+        <p><b>P(A) = número de casos favorables / número de casos posibles</b></p>
+
+        <h5 class="fw-semibold mt-4">Ejemplo Práctico</h5>
+        <p>
+            Si lanzas un dado, la probabilidad de obtener un 4 es:
+        </p>
+        <p><b>P(4) = 1/6</b></p>
+        <p class="text-secondary">
+            Esto se debe a que hay 6 posibles resultados (1, 2, 3, 4, 5, 6) y solo uno de ellos es el 4.
+        </p>
+
+        <!-- Video Explicativo -->
+        <div class="video-section my-4">
+            <h4>Video Explicativo</h4>
+            <p>
+                Este video proporciona una explicación detallada sobre los fundamentos de la probabilidad, incluyendo ejemplos y aplicaciones en la vida real.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=wglr7uNKigY" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

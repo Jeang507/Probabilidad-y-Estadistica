@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Población y Muestra</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Población y Muestra</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">¿Qué es la Población?</h4>
+        <p>
+            La <strong>población</strong> es el conjunto total de elementos u objetos que tienen una característica en común y sobre los cuales se quiere hacer una observación o estudio. Esta población puede ser finita o infinita, dependiendo de la naturaleza del estudio.
+        </p>
+        <p>
+            La población puede estar conformada por personas, objetos, eventos o cualquier otro tipo de unidad que sea relevante para el estudio. Generalmente, se busca obtener información que represente a toda la población.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si estamos investigando el rendimiento académico de los estudiantes de una universidad, la población sería todos los estudiantes de esa universidad.
+        </p>
+
+        <!-- Muestra -->
+        <h4 class="fw-semibold mt-4">¿Qué es una Muestra?</h4>
+        <p>
+            La <strong>muestra</strong> es un subconjunto representativo de la población. Cuando no es posible estudiar a toda la población debido a limitaciones de tiempo, presupuesto o tamaño, se selecciona una muestra. Es fundamental que la muestra sea representativa de la población para que los resultados sean válidos.
+        </p>
+        <p>
+            La muestra debe ser seleccionada de forma que refleje las características de la población, permitiendo hacer generalizaciones sobre el grupo completo a partir de los datos obtenidos de la muestra.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si en el estudio anterior no podemos investigar a todos los estudiantes de la universidad, podemos seleccionar una muestra de 100 estudiantes que representen diferentes carreras y edades.
+        </p>
+
+        <!-- Parámetros vs Estadísticos -->
+        <h4 class="fw-semibold mt-4">Parámetros vs. Estadísticos</h4>
+        <p>
+            Los términos <strong>parámetro</strong> y <strong>estadístico</strong> son importantes en estadística y se refieren a los valores que describen una población o una muestra respectivamente.
+        </p>
+
+        <h5 class="fw-semibold mt-4">Parámetro</h5>
+        <p>
+            Un <strong>parámetro</strong> es un valor numérico que describe una característica de toda la población. Dado que normalmente no se puede medir a toda la población, los parámetros son teóricos y no se pueden conocer directamente.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: La media de las calificaciones de todos los estudiantes de una universidad sería un parámetro.
+        </p>
+
+        <h5 class="fw-semibold mt-4">Estadístico</h5>
+        <p>
+            Un <strong>estadístico</strong> es un valor numérico que describe una característica de la muestra. A partir de este estadístico, se pueden hacer inferencias sobre la población.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: La media de las calificaciones de los 100 estudiantes seleccionados sería un estadístico.
+        </p>
+
+        <!-- Video Explicativo -->
+        <div class="video-section my-4">
+            <h4>Explicación visual sobre Población y Muestra</h4>
+            <p>
+                Este video ofrece una explicación visual de la diferencia entre población y muestra, y cómo se utilizan en los estudios estadísticos.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=Q4RZqKLZ8zU" target="_blank">
+                Ver video explicativo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

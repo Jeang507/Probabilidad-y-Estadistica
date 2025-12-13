@@ -1,0 +1,701 @@
+/* =========================
+   PALETA DE COLORES NUEVA
+   ==========================
+   Principal:     #FFFFFF (blanco)
+   Fondo claro:   #F8F9FA, #F1F8FF
+   Verde esmeralda: #10B981, #059669, #047857
+   Texto:         #111827, #374151, #6B7280
+   Acento:        #10B981
+   ========================= */
+
+:root {
+    --bg-main: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-light-alt: #f1f8ff;
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-tertiary: #6b7280;
+    --accent: #10B981;
+    --accent-dark: #059669;
+    --accent-darker: #047857;
+    --rounded: 14px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-color: #e5e7eb;
+}
+
+/* =========================
+   ESTILO GLOBAL
+========================= */
+
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-darker);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: var(--bg-main) !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    color: var(--accent);
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+.nav-link.active {
+    color: var(--accent) !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 3px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    padding: 7rem 1rem;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--bg-light) 0%, var(--bg-main) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2310b981' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-darker));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-section p {
+    width: 70%;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+}
+
+/* BOTONES */
+.btn-green {
+    background: linear-gradient(to right, var(--accent), var(--accent-dark));
+    color: white;
+    font-weight: 600;
+    border-radius: var(--rounded);
+    padding: 14px 32px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-darker));
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-green:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+.btn-green:hover::before {
+    left: 0;
+}
+
+/* =========================
+   CARDS PROFESIONALES
+========================= */
+
+.custom-card {
+    background: var(--bg-main);
+    border-radius: var(--rounded);
+    padding: 28px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-dark));
+    transition: all 0.4s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.custom-card:hover::before {
+    height: 100%;
+}
+
+.custom-card .card-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.custom-card .card-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+    padding: 5rem 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+section h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent), var(--accent-dark));
+    border-radius: 2px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--bg-light-alt);
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   TABLAS (para datos.html)
+========================= */
+
+.table-container {
+    overflow-x: auto;
+    border-radius: var(--rounded);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    background: var(--bg-main);
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+table th {
+    background: linear-gradient(to right, var(--accent), var(--accent-dark));
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover {
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+.fade-in {
+    animation: fade 0.8s ease-in-out forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================================
+   SECCIÓN EQUIPO — TARJETAS PROFESIONALES
+======================================= */
+
+.team-card {
+    background: var(--bg-main);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    padding: 25px;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================
+   EFECTO HOVER EN TEXTO
+============================ */
+p:hover, h4:hover, li:hover {
+    color: var(--accent) !important;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* ============================
+   TARJETA DE CONTENIDO
+============================ */
+.content-box {
+    background: var(--bg-main);
+    border-radius: var(--rounded);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.content-box:hover {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+}
+
+/* ============================
+   BOTONES DE VIDEO
+============================ */
+.video-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 2px solid var(--accent);
+    background: var(--bg-main);
+    color: var(--accent);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.video-btn:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================
+   TITULO SUBRAYADO
+============================ */
+.title-underline {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--accent);
+}
+
+/* ============================
+   NAVBAR MODERNA CON BLUR
+============================ */
+.nav-blur {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* ============================
+   SIDEBAR CONCEPTOS
+============================ */
+.sidebar-conceptos {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-main);
+    border-right: 1px solid var(--border-color);
+    padding-top: 80px;
+    transition: all 0.4s ease;
+    z-index: 2000;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-conceptos a {
+    display: block;
+    padding: 14px 24px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    border-left: 4px solid transparent;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.sidebar-conceptos a:hover {
+    background: rgba(16, 185, 129, 0.08);
+    border-left: 4px solid var(--accent);
+    color: var(--accent-dark);
+}
+
+.sidebar-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2500;
+    background: linear-gradient(to right, var(--accent), var(--accent-dark));
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.sidebar-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.sidebar-open {
+    left: 0 !important;
+}
+
+/* ============================
+   ESTILOS PARA TABLAS GRANDES
+============================= */
+
+/* Primera columna sticky */
+.sticky-column {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background-color: var(--bg-main);
+    border-right: 2px solid var(--border-color);
+}
+
+/* Encabezado sticky */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(to right, var(--accent), var(--accent-dark)) !important;
+}
+
+/* Hover elegante */
+.table-hover tbody tr:hover {
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+/* Estilo para celdas vacías o #N/A */
+.na-cell {
+    color: var(--text-tertiary) !important;
+    font-style: italic;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    background: linear-gradient(to right, var(--accent), var(--accent-dark));
+    color: white;
+    font-weight: 600;
+}
+
+/* ============================
+   BOTONES SECUNDARIOS
+============================= */
+.btn-outline-green {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: var(--rounded);
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-green:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================
+   RESPONSIVE
+============================= */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .custom-card, .team-card {
+        padding: 20px;
+    }
+}
+
+/* ======================================
+   FIX ABSOLUTO PARA EL FONDO NEGRO
+======================================= */
+
+body, html {
+    background: #ffffff !important;
+}
+
+/* Cualquier contenedor no asignado hereda blanco */
+div, section, main, article {
+    background-color: transparent !important;
+}
+
+/* Override total para contenedores oscuros heredados */
+.bg-dark, .text-white, .table-dark, .custom-dark, .dark-card {
+    background-color: #ffffff !important;
+    color: var(--text-primary) !important;
+}
+
+/* Para garantizar que NINGÚN bloque genere fondo gris/negro */
+.container, .row, .col, .content-box, .custom-card {
+    background-color: #ffffff !important;
+}
+
+/* El área debajo de tabs que te sale negra */
+.nav-tabs {
+    background-color: #ffffff !important;
+    border-color: var(--border-color) !important;
+}
+/* Desactivar cualquier estilo oscuro heredado de Bootstrap */
+.table-dark,
+.table-dark thead,
+.table-dark tbody,
+.table-dark td,
+.table-dark th {
+    background-color: #ffffff !important;
+    color: var(--text-primary) !important;
+}
+.avatar-margin {
+    margin-top: 0px; /* ajusta entre 20 y 40 según gusto */
+}
+
+thead tr th {
+    background: linear-gradient(to right, #059669, #047857) !important;
+    color: white !important;
+    font-weight: 600;
+}
+/* =====================================================
+   ANIMACIONES AVANZADAS EN SCROLL
+===================================================== */
+
+/* Base */
+.scroll-anim,
+.scroll-text,
+.scroll-left,
+.scroll-right,
+.scroll-zoom {
+    opacity: 0;
+    transition: all 0.9s ease;
+}
+
+/* Desde abajo */
+.scroll-anim {
+    transform: translateY(50px);
+}
+.scroll-anim.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Textos suaves */
+.scroll-text {
+    transform: translateY(30px);
+}
+.scroll-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Desde izquierda */
+.scroll-left {
+    transform: translateX(-60px);
+}
+.scroll-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Desde derecha */
+.scroll-right {
+    transform: translateX(60px);
+}
+.scroll-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom elegante */
+.scroll-zoom {
+    transform: scale(0.92);
+}
+.scroll-zoom.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hover extra para imágenes */
+.custom-card img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.custom-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+

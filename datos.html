@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Internet – Panel de Conectividad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- XLSX -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .table-container {
+            max-height: 70vh;
+            overflow: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        thead th {
+            background: linear-gradient(to right, var(--accent), var(--accent-dark)) !important;
+            color: white !important;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(16, 185, 129, 0.08);
+        }
+
+        table {
+            background: white !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+
+<!-- =========================
+     NAVBAR (TU NAVBAR COMPLETA)
+========================= -->
+<nav class="navbar navbar-expand-lg navbar-light border-bottom sticky-top"
+     style="background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fa-solid fa-chart-column me-2" style="color:#10B981;"></i>
+            <span style="background: linear-gradient(to right, #059669, #047857);
+                         -webkit-background-clip: text;
+                         -webkit-text-fill-color: transparent;">
+                Estadística & Probabilidad 2025
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Sobre el Proyecto</a></li>
+                <li class="nav-item"><a class="nav-link" href="modulos.html">Conceptos</a></li>
+                <li class="nav-item"><a class="nav-link" href="encuesta.html">Encuestas</a></li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="color:#059669; font-weight:700;" href="datos.html">
+                        Data_Internet
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="base_datos.html">Data_Encuesta</a></li>
+                <li class="nav-item"><a class="nav-link" href="analisis.html">Análisis</a></li>
+                <li class="nav-item"><a class="nav-link" href="referencia.html">Referencias</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-section fade-in"
+        style="background: linear-gradient(to bottom, #f1f8ff, #ffffff); padding: 4rem 1rem;">
+    <div class="container text-center">
+        <h1 class="fw-bold">Panel de Conectividad – Data Internet</h1>
+        <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+            Visualización interactiva de las 6 tablas oficiales del dataset nacional.
+        </p>
+    </div>
+</header>
+
+<!-- TABS -->
+<section class="container py-4 fade-in">
+    <ul class="nav nav-tabs" id="hojasTabs">
+        <li class="nav-item"><a class="nav-link active" data-hoja="TABLA_ORIGINAL">Tabla Original</a></li>
+        <li class="nav-item"><a class="nav-link" data-hoja="TABLA_GRÁFICA_DINÁMICO">Gráfica Dinámico</a></li>
+        <li class="nav-item"><a class="nav-link" data-hoja="BD_PUNTOS_DE_ACCESO">Puntos de Acceso</a></li>
+        <li class="nav-item"><a class="nav-link" data-hoja="BD_SESIONES_DE_USUARIO">Sesiones</a></li>
+        <li class="nav-item"><a class="nav-link" data-hoja="BD_DATA_TRANSFERIDA">Data Transferida</a></li>
+        <li class="nav-item"><a class="nav-link" data-hoja="BD_MEDUCA">Meduca</a></li>
+    </ul>
+</section>
+
+<!-- TABLA -->
+<section class="container pb-5 fade-in">
+    <div class="content-box p-4">
+
+        <h4 class="fw-bold mb-3" style="color:#059669;">
+            <i class="fa-solid fa-table me-2"></i>
+            Visualización de Datos
+        </h4>
+
+        <!-- BOTÓN EXPORTAR (MISMO DISEÑO, SIN onclick) -->
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-outline-green btn-sm" id="btn-exportar">
+                <i class="fas fa-file-excel me-1"></i> Exportar a Excel
+            </button>
+        </div>
+
+        <div class="table-container">
+            <table class="table table-bordered table-hover" id="tabla-excel">
+                <thead id="encabezados"></thead>
+                <tbody id="contenido"></tbody>
+            </table>
+        </div>
+
+        <p class="mt-3 text-secondary small">
+            *Datos cargados desde <strong>assets/data/data_internet.xlsx</strong>.
+        </p>
+
+    </div>
+</section>
+
+<!-- SCRIPTS -->
+<script src="assets/js/data_internet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

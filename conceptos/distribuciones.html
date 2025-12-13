@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuciones de Probabilidad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Distribuciones de Probabilidad</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Distribución Binomial -->
+        <h4 class="fw-semibold mt-4">1. Distribución Binomial</h4>
+        <p>
+            La <strong>distribución binomial</strong> es un modelo de probabilidad que describe la cantidad de éxitos en una cantidad fija de intentos en un experimento. Este tipo de distribución se aplica cuando el experimento tiene solo dos resultados posibles: éxito o fracaso. Es útil cuando:
+        </p>
+        <ul>
+            <li>El experimento se repite un número fijo de veces (n).</li>
+            <li>La probabilidad de éxito (p) es constante en cada intento.</li>
+            <li>Los intentos son independientes.</li>
+        </ul>
+        <p><b>P(X = k) = C(n, k) * p^k * (1-p)^(n-k)</b></p>
+        <p class="text-secondary">
+            Ejemplo: Lanzar una moneda 10 veces y contar cuántas veces sale cara. Si el éxito es "cara" y la probabilidad de obtener cara en un solo lanzamiento es 0.5, entonces estamos trabajando con una distribución binomial.
+        </p>
+
+        <div class="video-section my-4">
+            <h4>Explicación visual de la Distribución Binomial</h4>
+            <p>
+                Este video ofrece una introducción clara sobre la distribución binomial, sus características y cómo se calcula.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=DcKv7NwSEmU" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+        <!-- Distribución Normal -->
+        <h4 class="fw-semibold mt-4">2. Distribución Normal</h4>
+        <p>
+            La <strong>distribución normal</strong>, también conocida como distribución de Gauss, es una distribución continua que tiene forma de campana. Es simétrica y centrada en su media. Este tipo de distribución es común en fenómenos naturales y sociales. Algunos de sus puntos clave son:
+        </p>
+        <ul>
+            <li>Es simétrica alrededor de su media.</li>
+            <li>La media, la mediana y la moda coinciden en el mismo valor.</li>
+            <li>La probabilidad de observar valores cercanos a la media es mayor que para valores alejados.</li>
+        </ul>
+        <p><b>P(X) = (1 / √(2πσ²)) * e^(-(X-μ)² / 2σ²)</b></p>
+        <p class="text-secondary">
+            Ejemplo: La estatura de los adultos en un país sigue una distribución normal. La mayoría de las personas tienen una estatura cercana a la media, y menos personas son extremadamente altas o bajas.
+        </p>
+
+        <div class="video-section my-4">
+            <h4>Explicación visual de la Distribución Normal</h4>
+            <p>
+                Este video proporciona una explicación detallada sobre la distribución normal, cómo se representa y sus aplicaciones.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=PKgk6wmM2FI" target="_blank">
+                Ver video explicativo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+        <!-- Distribución de Poisson -->
+        <h4 class="fw-semibold mt-4">3. Distribución de Poisson</h4>
+        <p>
+            La <strong>distribución de Poisson</strong> se utiliza para modelar la cantidad de veces que ocurre un evento en un intervalo de tiempo o espacio determinado. Es adecuada para eventos raros pero posibles, como el número de llamadas que recibe un centro de atención en un día.
+        </p>
+        <ul>
+            <li>El evento ocurre en intervalos de tiempo fijos.</li>
+            <li>Los eventos son independientes entre sí.</li>
+            <li>El número de eventos por unidad de tiempo es constante.</li>
+        </ul>
+        <p><b>P(X = k) = (λ^k * e^(-λ)) / k!</b></p>
+        <p class="text-secondary">
+            Ejemplo: El número de llamadas que recibe un centro de atención telefónica en un minuto sigue una distribución de Poisson. La probabilidad de recibir k llamadas en ese minuto depende de la tasa promedio de llamadas (λ).
+        </p>
+
+        <div class="video-section my-4">
+            <h4>Explicación visual de la Distribución de Poisson</h4>
+            <p>
+                Este video te ayudará a comprender la distribución de Poisson, cómo se utiliza y cuándo es aplicable.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=hmAfNpD7Eps" target="_blank">
+                Ver video explicativo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

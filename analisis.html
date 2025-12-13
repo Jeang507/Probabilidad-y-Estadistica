@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Estadístico</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Estilo explicaciones -->
+    <style>
+    .explicacion-grafica {
+        max-width: 980px;
+        margin: -1.2rem auto 4rem auto;
+        font-size: 1.15rem;
+        color: #000000 !important;
+        line-height: 1.9;
+        text-align: justify;
+        transition: color 0.3s ease;
+    }
+
+    .explicacion-grafica:hover {
+        color: #2ecc71 !important;
+    }
+
+    .custom-card h3 {
+        transition: color 0.3s ease;
+    }
+
+    .custom-card h3:hover {
+        color: #2ecc71 !important;
+    }
+
+    /* ANIMACIONES SCROLL (TODO) */
+    .scroll,
+    .scroll-text,
+    .scroll-left,
+    .scroll-right,
+    .scroll-zoom {
+        opacity: 0;
+        transition: all 0.9s ease;
+    }
+
+    .scroll {
+        transform: translateY(50px);
+    }
+    .scroll.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .scroll-text {
+        transform: translateY(30px);
+    }
+    .scroll-text.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .scroll-left {
+        transform: translateX(-60px);
+    }
+    .scroll-left.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .scroll-right {
+        transform: translateX(60px);
+    }
+    .scroll-right.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .scroll-zoom {
+        transform: scale(0.92);
+    }
+    .scroll-zoom.show {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .custom-card img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .custom-card img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+</style>
+
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- NAVBAR GLOBAL (COMPLETO) -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top"
+     style="backdrop-filter: blur(8px); background: rgba(20,20,20,0.85);">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fa-solid fa-chart-column me-2 text-danger"></i>
+            Estadística & Probabilidad – 2025
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="about.html">Sobre el Proyecto</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="modulos.html">Conceptos</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="encuesta.html">Encuestas</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="datos.html">Data_Internet</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="base_datos.html">Data_Encuesta</a></li>
+                <li class="nav-item">
+                    <a class="nav-link text-light active" href="analisis.html">Análisis</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="referencia.html">Referencias</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO-->
+<header class="hero-section scroll pb-5">
+    <div class="container text-center">
+        <h1 class="fw-bold">Análisis Estadístico</h1>
+        <p class="lead mt-3 text-secondary" style="max-width: 860px; margin:auto;">
+            En esta sección se presenta el análisis detallado de los resultados obtenidos a partir
+            de los datos recolectados en la encuesta, con el objetivo de interpretar tendencias,
+            distribuciones y relaciones entre las variables estudiadas.
+        </p>
+    </div>
+</header>
+
+<!-- CONTENIDO-->
+<section class="container py-5 fade-in">
+
+<!-- ===================== GRAFICA 1 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 1</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica1.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+
+    La gráfica muestra la evolución de la producción industrial de bebidas alcohólicas, bebidas gaseosas y alcohol rectificado entre los años 2020 y 2024. Se observa que el alcohol rectificado presenta un crecimiento considerable, alcanzando su punto máximo en el año 2022, lo cual puede estar asociado a un incremento en la demanda industrial o a cambios en los procesos productivos. En contraste, las bebidas alcohólicas y gaseosas presentan variaciones más moderadas, lo que sugiere una producción relativamente estable durante el período analizado.
+</p>
+
+<!-- ===================== GRAFICA 1.1 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 1.1</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica1.1.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    Esta representación horizontal permite una comparación más clara entre los distintos años y tipos de producción. Se evidencia nuevamente que el alcohol rectificado domina ampliamente los niveles de producción en comparación con las bebidas alcohólicas y gaseosas. Este tipo de visualización facilita la identificación de diferencias y refuerza la tendencia observada en la gráfica anterior.
+</p>
+
+<!-- ===================== GRAFICA 2 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 2</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica2.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica compara el crecimiento poblacional de las provincias de Colón y Los Santos a lo largo del tiempo. Se observa que Colón presenta un crecimiento más acelerado, lo cual puede relacionarse con factores como el desarrollo económico, la migración interna y la urbanización. Por otro lado, Los Santos muestra un crecimiento más gradual y estable, reflejando diferencias demográficas y socioeconómicas entre ambas provincias.
+</p>
+
+<!-- ===================== GRAFICA 3 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 3</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica3.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica muestra la evolución de la población de la provincia de Chiriquí desde 1911 hasta 2023. Se evidencia un crecimiento sostenido a lo largo de los censos, con incrementos más pronunciados a partir de la segunda mitad del siglo XX. Este comportamiento refleja un proceso continuo de expansión demográfica, posiblemente vinculado al desarrollo agrícola, económico y urbano de la región.
+</p>
+
+<!-- ===================== GRAFICA 4 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 4</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica4.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica presenta la distribución de las principales causas de muerte en la República de Panamá. Se observa que una proporción significativa corresponde a enfermedades crónicas no transmisibles, como los tumores malignos y las enfermedades cardiovasculares. Estos resultados resaltan la importancia de fortalecer estrategias de prevención, diagnóstico temprano y control de estas enfermedades como un reto prioritario de salud pública.
+</p>
+
+<!-- ===================== GRAFICA 5 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 5</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica5.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    El embudo de ventas representa el proceso desde los visitantes iniciales hasta las ventas concretadas. Se aprecia una disminución progresiva en cada etapa, lo que indica que solo una fracción de los usuarios completa el proceso de compra. Este análisis permite identificar puntos críticos donde podrían implementarse mejoras para optimizar la conversión y la eficiencia del proceso comercial.
+</p>
+
+<!-- ===================== GRAFICA 6 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 6</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica6.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica muestra un intervalo de confianza del 95 % para la media poblacional del tiempo de estudio. A partir de los datos muestrales, se estima que el promedio real se encuentra entre 4.499 y 7.481 horas. Esto indica que la estimación realizada es confiable y que el intervalo proporciona una medida adecuada de precisión.
+</p>
+
+<!-- ===================== GRAFICA 7 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 7</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica7.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    Esta gráfica representa un intervalo de confianza del 95 % para la proporción poblacional de individuos que cumplen una determinada condición. Se estima que la proporción real se encuentra entre 0.4 % y 3.1 %, lo que refleja un margen de error controlado y una estimación estadísticamente confiable.
+</p>
+
+<!-- ===================== GRAFICA 8 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 8</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica8.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    El diagrama de caja compara el tiempo de estudio según el sexo. Se observan diferencias en la mediana y en la dispersión de los datos, así como la presencia de valores atípicos. Esto indica variabilidad en los hábitos de estudio entre los grupos analizados y permite identificar posibles diferencias en el comportamiento académico.
+</p>
+
+<!-- ===================== GRAFICA 9 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 9</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica9.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    El diagrama de caja muestra que la mayoría de los estudiantes dedica pocas horas al estudio, concentrándose en los valores más bajos. Sin embargo, existe un grupo reducido que dedica un tiempo considerablemente mayor, lo que genera una distribución asimétrica positiva.
+</p>
+
+<!-- ===================== GRAFICA 10 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 10</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica10.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica de dispersión muestra una relación positiva débil entre el tiempo de estudio y la disposición a invertir. La alta dispersión de los datos indica que esta relación no es fuerte y que otros factores influyen significativamente en la decisión de inversión.
+</p>
+
+<!-- ===================== GRAFICA 11 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 11</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica11.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica confirma que el aumento en la disposición a invertir no guarda una relación significativa con un mayor tiempo de estudio. Esto refuerza la conclusión de que la correlación entre ambas variables es débil.
+</p>
+
+<!-- ===================== GRAFICA 12 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 12</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica12.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La mayoría de los estudiantes manifiesta estar dispuesta a dedicar entre 1 y 6 horas al estudio de la computación cuántica. Un grupo menor está dispuesto a invertir más tiempo, lo que refleja un interés moderado con presencia de estudiantes altamente motivados.
+</p>
+
+<!-- ===================== GRAFICA 13 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 13</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica13.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica muestra una mayor participación del género masculino, seguida del femenino, con una proporción mínima de participantes que prefieren no especificar su género. Esta información es relevante para contextualizar los resultados de la encuesta.
+</p>
+
+<!-- ===================== GRAFICA 14 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 14</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica14.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La distribución de edades muestra una mayor concentración entre los 18 y 24 años, característica típica de la población universitaria. A medida que aumenta la edad, la frecuencia disminuye progresivamente.
+</p>
+
+<!-- ===================== GRAFICA 15 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 15</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica15.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica muestra que la mayoría de los estudiantes dedica pocas horas al estudio de la computación cuántica. La distribución es asimétrica positiva, indicando que solo un pequeño grupo invierte un tiempo elevado.
+</p>
+
+<!-- ===================== GRAFICA 16 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 16</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica16.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    El diagrama de caja indica que la mediana del nivel de conocimiento se sitúa en 2, lo que refleja un conocimiento bajo o básico en la mayoría de los participantes. Los niveles altos aparecen con menor frecuencia.
+</p>
+
+<!-- ===================== GRAFICA 17 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 17</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica17.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica muestra una alta variabilidad en la disposición mensual a invertir. La mayoría se concentra en montos bajos, aunque se observan valores atípicos elevados correspondientes a un grupo reducido.
+</p>
+
+<!-- ===================== GRAFICA 18 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 18</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica18.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La gráfica evidencia variaciones en la cantidad de encuestas realizadas por día según el encuestador. Esto permite analizar diferencias en productividad y desempeño individual durante el periodo de recolección de datos.
+</p>
+
+<!-- ===================== GRAFICA 19 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 19</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica19.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La mayoría de los participantes considera que la computación cuántica tendrá un impacto altamente significativo en el futuro, concentrándose en los valores más altos de la escala de evaluación.
+</p>
+
+<!-- ===================== GRAFICA 20 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 20</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica20.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    Los niveles más altos de interés concentran la mayor frecuencia, lo que refleja una actitud positiva hacia el aprendizaje y la formación en computación cuántica.
+</p>
+
+<!-- ===================== GRAFICA 21 ===================== -->
+<div class="custom-card p-4 mb-4 text-center scroll scroll-zoom">
+    <h3 class="fw-bold mb-4"><i class="fa-solid fa-chart-line text-danger me-2"></i>Gráfica 21</h3>
+    <div class="d-flex justify-content-center">
+        <img src="assets/data/grafica21.png" class="img-fluid bg-light p-3 rounded">
+    </div>
+</div>
+<p class="explicacion-grafica scroll-text">
+    La mayoría de los participantes percibe la accesibilidad al estudio de la computación cuántica como baja o moderada. Esto sugiere la existencia de barreras educativas, tecnológicas y económicas que limitan su acceso.
+</p>
+
+</section>
+
+<!-- FOOTER-->
+<footer class="mt-5 text-center text-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+    <p class="small">Universidad de Panamá — II Semestre</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(
+        ".scroll, .scroll-text, .scroll-left, .scroll-right, .scroll-zoom"
+    ).forEach(el => observer.observe(el));
+
+});
+</script>
+
+</body>
+</html>

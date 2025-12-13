@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Estadística</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-chart-column text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Tipos de Estadística</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">Tipos de Estadística</h4>
+        <p>
+            La estadística se divide principalmente en dos ramas: la <strong>estadística descriptiva</strong> y la <strong>estadística inferencial</strong>. Ambas se utilizan para analizar datos, pero tienen propósitos y enfoques diferentes.
+        </p>
+
+        <!-- Estadística Descriptiva -->
+        <h5 class="fw-semibold mt-4">1. Estadística Descriptiva</h5>
+        <p>
+            La <strong>estadística descriptiva</strong> se encarga de organizar, resumir y presentar los datos de una forma comprensible. No busca hacer predicciones ni inferencias sobre una población, sino simplemente representar la información de manera visual y cuantitativa. 
+        </p>
+        <p>
+            Las herramientas más comunes utilizadas en estadística descriptiva incluyen:
+        </p>
+        <ul>
+            <li><strong>Tablas de frecuencia:</strong> Organizan los datos en intervalos para ver la frecuencia con la que ocurren ciertos eventos.</li>
+            <li><strong>Gráficas:</strong> Como los histogramas, diagramas de barras y gráficos circulares, que facilitan la visualización de la distribución de los datos.</li>
+            <li><strong>Medidas de tendencia central:</strong> Como la media (promedio), mediana y moda, que permiten identificar el valor central o más representativo de un conjunto de datos.</li>
+            <li><strong>Medidas de dispersión:</strong> Como el rango, varianza y desviación estándar, que indican qué tan dispersos o concentrados están los datos alrededor de la media.</li>
+        </ul>
+        <p>
+            Ejemplo: Si tenemos los puntajes de 5 estudiantes en un examen, la estadística descriptiva nos permite calcular el promedio de los puntajes, identificar la puntuación más baja o más alta, y visualizar estos datos a través de gráficos.
+        </p>
+
+        <!-- Estadística Inferencial -->
+        <h5 class="fw-semibold mt-4">2. Estadística Inferencial</h5>
+        <p>
+            La <strong>estadística inferencial</strong> va más allá de los datos disponibles y trata de hacer conclusiones o predicciones sobre una población basándose en una muestra representativa. Utiliza teorías y modelos matemáticos para hacer estimaciones y probar hipótesis.
+        </p>
+        <p>
+            Algunas de las técnicas utilizadas en la estadística inferencial incluyen:
+        </p>
+        <ul>
+            <li><strong>Estimación de parámetros:</strong> A través de estimadores como la media muestral, se pueden hacer aproximaciones de los parámetros de la población.</li>
+            <li><strong>Pruebas de hipótesis:</strong> Sirven para probar si una suposición sobre una población es válida o no, como por ejemplo comprobar si la media de un grupo de estudiantes es significativamente diferente de una media hipotética.</li>
+            <li><strong>Intervalos de confianza:</strong> Estiman el rango dentro del cual se encuentra un parámetro poblacional con un nivel de confianza determinado.</li>
+            <li><strong>Regresión y correlación:</strong> Permiten analizar la relación entre dos o más variables y prever comportamientos futuros.</li>
+        </ul>
+        <p>
+            Ejemplo: Si queremos saber si la media de los ingresos de los trabajadores en una ciudad es superior a un valor específico, podemos tomar una muestra de ingresos y realizar una prueba de hipótesis para llegar a una conclusión acerca de toda la población.
+        </p>
+
+        <!-- Video Explicativo -->
+        <div class="video-section my-4">
+            <h4>Video Explicativo</h4>
+            <p>
+                Este video ofrece una introducción clara sobre los tipos de estadística, explicando tanto la estadística descriptiva como inferencial, con ejemplos fáciles de entender.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=alRCKBUClps" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

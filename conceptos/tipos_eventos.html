@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Eventos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Tipos de Eventos</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">Tipos de Eventos</h4>
+        <p>
+            En probabilidad, los <strong>eventos</strong> son resultados posibles o combinaciones de estos en un experimento aleatorio. Dependiendo de sus características y relaciones, los eventos se pueden clasificar en diferentes tipos. A continuación, se presentan los más importantes, con ejemplos para comprender su funcionamiento.
+        </p>
+
+        <!-- Evento Seguro -->
+        <h5 class="fw-semibold mt-4">1. Evento Seguro</h5>
+        <p>
+            Un <strong>evento seguro</strong> es aquel que siempre ocurrirá, sin importar las circunstancias. Su probabilidad es 1, lo que significa que su ocurrencia es un hecho garantizado. En otras palabras, es un evento que es seguro que suceda dentro de un espacio muestral determinado.
+        </p>
+        <p><b>Ejemplo:</b> Al lanzar un dado, siempre obtendrás un número entre 1 y 6, por lo que la probabilidad de este evento es 1.</p>
+
+        <!-- Evento Imposible -->
+        <h5 class="fw-semibold mt-4">2. Evento Imposible</h5>
+        <p>
+            Un <strong>evento imposible</strong> es aquel que nunca puede ocurrir, independientemente de las circunstancias. Su probabilidad es 0, ya que no existe ninguna posibilidad de que ocurra.
+        </p>
+        <p><b>Ejemplo:</b> Obtener un 9 en un dado de 6 caras es un evento imposible, porque no hay ningún 9 en el dado.</p>
+
+        <!-- Evento Simple -->
+        <h5 class="fw-semibold mt-4">3. Evento Simple</h5>
+        <p>
+            Un <strong>evento simple</strong> está formado por un solo resultado del espacio muestral. Es el evento más básico y fácil de identificar, ya que se refiere a un único resultado dentro del conjunto de posibles resultados de un experimento.
+        </p>
+        <p><b>Ejemplo:</b> Si lanzamos un dado, el evento A = {3} es un evento simple, ya que solo contiene el resultado 3.</p>
+
+        <!-- Evento Compuesto -->
+        <h5 class="fw-semibold mt-4">4. Evento Compuesto</h5>
+        <p>
+            Un <strong>evento compuesto</strong> está formado por más de un resultado dentro del espacio muestral. Se compone de la combinación de múltiples resultados simples. Estos eventos pueden involucrar varios elementos que cumplen ciertas condiciones.
+        </p>
+        <p><b>Ejemplo:</b> Si lanzamos un dado y queremos el evento B = {2, 4, 6}, estamos observando un evento compuesto que incluye todos los números pares en el dado.</p>
+
+        <!-- Eventos Compatibles -->
+        <h5 class="fw-semibold mt-4">5. Eventos Compatibles</h5>
+        <p>
+            Los <strong>eventos compatibles</strong> son aquellos que pueden ocurrir simultáneamente. Esto significa que no se excluyen entre sí y es posible que ambos se den al mismo tiempo dentro de un experimento.
+        </p>
+        <p><b>Ejemplo:</b> Un evento A = "número par" y un evento B = "número mayor que 3" son compatibles, ya que es posible que ambos ocurran (por ejemplo, el número 4).</p>
+
+        <!-- Eventos Mutuamente Excluyentes -->
+        <h5 class="fw-semibold mt-4">6. Eventos Mutuamente Excluyentes</h5>
+        <p>
+            Los <strong>eventos mutuamente excluyentes</strong> son aquellos que no pueden ocurrir al mismo tiempo. Si uno ocurre, el otro no puede suceder bajo ninguna circunstancia.
+        </p>
+        <p><b>Ejemplo:</b> Si lanzamos un dado, los eventos "obtener 3" y "obtener 5" son mutuamente excluyentes, ya que no es posible obtener ambos números en un solo lanzamiento.</p>
+
+        <!-- Eventos Independientes -->
+        <h5 class="fw-semibold mt-4">7. Eventos Independientes</h5>
+        <p>
+            Los <strong>eventos independientes</strong> son aquellos cuya ocurrencia no afecta la probabilidad de que ocurra el otro. Es decir, la probabilidad de que sucedan ambos eventos es el producto de sus probabilidades individuales.
+        </p>
+        <p><b>Ejemplo:</b> Lanzar una moneda y luego lanzar un dado. El resultado del lanzamiento de la moneda no afecta el resultado del dado.</p>
+
+        <!-- Video Explicativo de Tipos de Eventos -->
+        <div class="video-section my-4">
+            <h4>Video explicativo</h4>
+            <p>
+                Este video ofrece una explicación detallada sobre los tipos de eventos en probabilidad, con ejemplos visuales que facilitarán la comprensión de cada tipo. ¡No te lo pierdas!
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=sVqJIfzn9Eg" target="_blank">
+                Ver video sobre Tipos de Eventos <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

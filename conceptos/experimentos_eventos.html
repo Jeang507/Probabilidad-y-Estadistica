@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimentos en Probabilidad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Experimentos en Probabilidad</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">¿Qué es un Experimento en Probabilidad?</h4>
+        <p>
+            En probabilidad, un experimento es una acción cuyo resultado se desea observar. Los experimentos en probabilidad se pueden clasificar según su naturaleza en dos tipos principales: determinísticos y aleatorios. Los resultados de los experimentos aleatorios son inciertos, mientras que los determinísticos producen los mismos resultados siempre que se repitan las mismas condiciones.
+        </p>
+
+        <!-- Experimento Determinístico -->
+        <h5 class="fw-semibold mt-4">1. Experimento Determinístico</h5>
+        <p>
+            Un <strong>experimento determinístico</strong> es aquel en el que, dadas las mismas condiciones, siempre se obtiene el mismo resultado. Esto significa que los resultados no dependen del azar ni de la variabilidad. 
+        </p>
+        <p><strong>Ejemplos:</strong></p>
+        <ul>
+            <li>Encender un interruptor de luz.</li>
+            <li>Mezclar agua con sal.</li>
+        </ul>
+        <p>
+            Estos son ejemplos de experimentos determinísticos porque, al realizarlos bajo las mismas condiciones, siempre obtendrás el mismo resultado. Al encender un interruptor de luz, siempre se encenderá la luz, sin variabilidad ni incertidumbre.
+        </p>
+
+        <!-- Experimento Aleatorio -->
+        <h5 class="fw-semibold mt-4">2. Experimento Aleatorio</h5>
+        <p>
+            Un <strong>experimento aleatorio</strong> es aquel en el que, incluso repitiendo el experimento bajo las mismas condiciones, no se puede predecir el resultado. Es decir, el resultado depende del azar y tiene diferentes posibles resultados.
+        </p>
+        <p><strong>Ejemplos:</strong></p>
+        <ul>
+            <li>Lanzar una moneda.</li>
+            <li>Lanzar un dado.</li>
+            <li>Sacar una carta de una baraja.</li>
+        </ul>
+        <p>
+            Estos son ejemplos de experimentos aleatorios porque, aunque se repitan las mismas condiciones, el resultado es incierto. No podemos predecir si saldrá cara o cruz al lanzar una moneda, ni qué número saldrá al lanzar un dado.
+        </p>
+
+        <!-- Espacio Muestral -->
+        <h4 class="fw-semibold mt-4">Espacio Muestral (S)</h4>
+        <p>
+            El <strong>espacio muestral</strong> es el conjunto de todos los resultados posibles de un experimento aleatorio. Es decir, el espacio muestral abarca todas las posibilidades que pueden ocurrir en el experimento.
+        </p>
+        <p><strong>Ejemplo:</strong> Si lanzamos un dado, el espacio muestral es: 
+            <code>S = {1, 2, 3, 4, 5, 6}</code>, ya que esos son los resultados posibles que pueden ocurrir al lanzar el dado.
+        </p>
+
+        <!-- Evento o Suceso -->
+        <h4 class="fw-semibold mt-4">Evento o Suceso</h4>
+        <p>
+            Un <strong>evento</strong> o <strong>suceso</strong> es cualquier subconjunto del espacio muestral. Esto significa que un evento es un grupo de resultados posibles del experimento. 
+        </p>
+        <p><strong>Ejemplo:</strong> Si lanzamos un dado, podemos definir un evento A = “sacar un número par”, lo cual incluye los resultados <code>A = {2, 4, 6}</code>.
+        </p>
+
+        <!-- Video Principal -->
+        <div class="video-section my-4">
+            <h4>Explicación visual de Experimentos en Probabilidad</h4>
+            <p>
+                Este video proporciona una visión completa de los experimentos en probabilidad, incluyendo ejemplos y explicaciones claras sobre los experimentos determinísticos y aleatorios, el espacio muestral y los eventos.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=tQh29_Noo9w&list=PLeySRPnY35dEtzvR4hUhigwTCHQcxP28l" target="_blank">
+                Ver video explicativo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

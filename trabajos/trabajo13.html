@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo 13 – Historia Temprana de la Probabilidad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .sidebar-btn { position: fixed; top: 15px; left: 15px; z-index: 10000; background: #059669; color:white; padding:10px 14px; border:none; border-radius:8px; cursor:pointer; }
+        .sidebar-trabajos { position:fixed; top:0; left:-260px; width:260px; height:100%; background:#1f2937; padding:20px; color:white; overflow-y:auto; transition:0.3s; z-index:9999; }
+        .sidebar-open { left:0 !important; }
+        .sidebar-trabajos a { display:block; padding:8px 0; color:#d1d5db; text-decoration:none; }
+        .sidebar-trabajos a:hover { color:white; }
+        .content-box { background:white; border-radius:12px; padding:25px; box-shadow:var(--shadow); border:1px solid var(--border-color); }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+
+<!-- SIDEBAR -->
+<button class="sidebar-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+
+<div id="sidebarTrabajos" class="sidebar-trabajos">
+    <h4 class="fw-bold mb-3">📄 Trabajos</h4>
+    <a href="trabajo1.html">• Trabajo 1 – PDF</a>
+    <a href="trabajo2.html">• Trabajo 2 – PDF</a>
+    <a href="trabajo3.html">• Trabajo 3 – PDF</a>
+    <a href="trabajo4.html">• Trabajo 4 – PDF</a>
+    <a href="trabajo6.html">• Trabajo 6 – PDF</a>
+    <a href="trabajo7.html">• Trabajo 7 – PDF</a>
+    <a href="trabajo10.html">• Trabajo 10 – PDF</a>
+    <a href="trabajo12.html">• Trabajo 12 – PDF</a>
+    <a href="trabajo13.html">• Trabajo 13 – HTML</a>
+    <a href="../index.html">🏠 Volver al Inicio</a>
+</div>
+
+<script>
+function toggleSidebar(){ document.getElementById("sidebarTrabajos").classList.toggle("sidebar-open"); }
+</script>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light border-bottom sticky-top"
+     style="background:rgba(255,255,255,0.95); backdrop-filter:blur(10px);">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-chart-column me-2" style="color:#10B981;"></i>
+            <span style="background:linear-gradient(to right,#059669,#047857); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+                Estadística & Probabilidad 2025
+            </span>
+        </a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-section text-center py-4">
+    <h1 class="fw-bold">Trabajo Académico 13</h1>
+    <p class="lead text-secondary">Historia temprana y evolución del concepto de probabilidad</p>
+</header>
+
+<!-- CONTENIDO -->
+<section class="container pb-5">
+    <a href="../index.html" class="btn btn-green mb-4">← Volver al Inicio</a>
+
+    <div class="content-box">
+
+        <!-- ACTIVIDAD -->
+        <h4 class="fw-bold mb-3" style="color:#059669;">
+            <i class="fa-solid fa-users-line me-2"></i> Actividad Realizada en Clase
+        </h4>
+
+        <p>
+            Se realizó una actividad grupal en la que los estudiantes elaboraron un video corto (estilo reels/TikTok) sobre la introducción histórica de la probabilidad. El texto presentado a continuación corresponde a la <strong>transcripción narrativa del video producido por los propios estudiantes</strong>.
+        </p>
+
+        <!-- TRANSCRIPCIÓN -->
+        <h3 class="fw-bold mb-3" style="color:#059669;">
+            <i class="fa-solid fa-scroll me-2"></i> Transcripción del Video
+        </h3>
+
+        <p>
+        ¿Sabías que antes de existir la teoría matemática de la probabilidad, la humanidad ya intentaba comprender el azar? Mucho antes de fórmulas o ecuaciones, las civilizaciones usaban religión, magia y juegos para intentar interpretar la incertidumbre del mundo.
+        </p>
+
+        <p>
+        En <strong>Mesopotamia</strong>, hace más de 4,000 años, se utilizaban dados tallados para adivinación y juegos. En <strong>Egipto</strong>, el famoso juego del Cenet mezclaba ritualidad y entretenimiento. Con la repetición de tiradas, las personas comenzaron a notar patrones: algunas combinaciones aparecían con mayor frecuencia. Sin saberlo, estaban descubriendo la probabilidad empírica.
+        </p>
+
+        <p>
+        En <strong>India</strong>, los dados aparecen en los textos sagrados Vedas y el Mahabharata. En <strong>China</strong>, el I Ching utilizaba tiradas de monedas o varillas como un generador de resultados aleatorios: cada hexagrama representaba una combinación posible, anticipando el pensamiento combinatorio miles de años antes de su formalización.
+        </p>
+
+        <p>
+        En <strong>Grecia</strong>, el azar entra en la filosofía. Aristóteles reflexionó sobre los eventos necesarios, causales y aleatorios. Epicuro propuso desviaciones aleatorias en los átomos, una idea sorprendentemente cercana a conceptos de la física moderna.
+        </p>
+
+        <p>
+        Durante la <strong>Edad Media</strong>, el conocimiento matemático floreció en el mundo islámico, donde comerciantes y sabios desarrollaron técnicas combinatorias para calcular riesgos en contratos y préstamos.
+        </p>
+
+        <p>
+        En Europa, con el auge del comercio, los juegos de azar se popularizaron. Fibonacci introdujo el sistema indo-arábigo, permitiendo aplicar matemáticas a proporciones, combinaciones y problemas reales.
+        </p>
+
+        <p>
+        Lanzar monedas, varillas o dados se volvió una práctica universal: desde China hasta Grecia, incluso para elegir cargos públicos. Esto revelaba una idea esencial: si existen resultados posibles y se repiten, existe una frecuencia… y si existe frecuencia, existe probabilidad.
+        </p>
+
+        <p>
+        Finalmente, en el <strong>siglo XV</strong>, surgieron las bases formales para el nacimiento de la teoría matemática de la probabilidad.
+        </p>
+
+        <p class="fw-bold">
+            La próxima vez que lances un dado, recuerda: estás participando en una historia de más de 4,000 años.
+        </p>
+
+        <hr class="my-4">
+
+        <!-- VIDEO REALIZADO POR EL GRUPO -->
+        <h4 class="fw-bold mb-3" style="color:#059669;">
+            <i class="fa-brands fa-youtube me-2"></i> Video Elaborado por los Estudiantes
+        </h4>
+
+        <div class="ratio ratio-16x9 mb-4">
+            <iframe src="https://www.youtube.com/embed/bltIAEJ8x8s"
+                    title="Historia de la Probabilidad – Video Estudiantil" allowfullscreen></iframe>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre el Proyecto – Estadística & Probabilidad 2025</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .section-title {
+            font-weight: 800;
+            font-size: 2.4rem;
+            background: linear-gradient(to right, var(--accent-dark), var(--accent-darker));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(to right, var(--accent), var(--accent-dark));
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .team-role {
+            color: var(--accent-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .highlight-number {
+            color: var(--accent-dark);
+            font-weight: 700;
+        }
+
+        .icon-large {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light border-bottom border-light-subtle sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fa-solid fa-chart-column me-2" style="color: var(--accent);"></i>
+            <span style="background: linear-gradient(to right, var(--accent-dark), var(--accent-darker));
+                         -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Estadística & Probabilidad 2025
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">Sobre el Proyecto</a></li>
+                <li class="nav-item"><a class="nav-link" href="modulos.html">Conceptos</a></li>
+                <li class="nav-item"><a class="nav-link" href="encuesta.html">Encuestas</a></li>
+                <li class="nav-item"><a class="nav-link" href="datos.html">Data Internet</a></li>
+                <li class="nav-item"><a class="nav-link" href="base_datos.html">Data Encuesta</a></li>
+                <li class="nav-item"><a class="nav-link" href="analisis.html">Análisis</a></li>
+                <li class="nav-item"><a class="nav-link" href="referencia.html">Referencias</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-section fade-in py-5">
+    <div class="container text-center">
+        <h1 class="fw-bold display-5 mb-3"
+            style="background: linear-gradient(to right, var(--accent-dark), var(--accent-darker));
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Sobre el Proyecto
+        </h1>
+        <div class="divider"></div>
+        <p class="lead mt-4" style="max-width: 850px; margin:auto; color: var(--text-secondary);">
+            Este proyecto reúne los trabajos, análisis y actividades desarrolladas durante el
+            II Semestre 2025 en la asignatura de Probabilidad y Estadística. A través de datos reales,
+            encuestas y visualizaciones, se muestra cómo los conceptos vistos en clase se aplican
+            a situaciones concretas.
+        </p>
+    </div>
+</header>
+
+<!-- OBJETIVOS -->
+<section class="container py-5 fade-in">
+    <h2 class="section-title">Objetivos del Proyecto</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="custom-card h-100">
+                <h4 class="card-title mb-3">
+                    <i class="fa-solid fa-bullseye me-2" style="color: var(--accent);"></i>
+                    Objetivo General
+                </h4>
+                <p class="card-text">
+                    Crear una plataforma interactiva que permita aplicar y comprender los conceptos
+                    de Probabilidad y Estadística utilizando datos reales, gráficos y herramientas digitales,
+                    conectando la teoría vista en clase con situaciones prácticas.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="custom-card h-100">
+                <h4 class="card-title mb-3">
+                    <i class="fa-solid fa-list-check me-2" style="color: var(--accent);"></i>
+                    Objetivos Específicos
+                </h4>
+                <ul class="card-text">
+                    <li class="mb-2">Analizar datos reales provenientes de encuestas e instituciones.</li>
+                    <li class="mb-2">Representar la información mediante gráficos claros e interactivos.</li>
+                    <li class="mb-2">Evaluar una encuesta sobre computación cuántica (<span class="highlight-number">349 respuestas</span>).</li>
+                    <li class="mb-2">Identificar patrones, tendencias y relaciones entre variables.</li>
+                    <li>Integrar diferentes fuentes de información en una sola plataforma.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FUENTES DE DATOS -->
+<section class="container py-5 fade-in" style="background-color: var(--bg-light);">
+    <h2 class="section-title">Fuentes de Datos</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="custom-card h-100 text-center">
+                <div class="icon-large"><i class="fa-solid fa-atom"></i></div>
+                <h4 class="card-title mb-3">Encuesta Cuántica</h4>
+                <p class="card-text">
+                    Encuesta aplicada a <span class="highlight-number">349 estudiantes</span>,
+                    orientada a conocer su nivel de conocimiento e interés en la computación cuántica.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="custom-card h-100 text-center">
+                <div class="icon-large"><i class="fa-solid fa-network-wired"></i></div>
+                <h4 class="card-title mb-3">Conectividad Panamá</h4>
+                <p class="card-text">
+                    Datos oficiales sobre conectividad en instituciones educativas de Panamá,
+                    incluyendo sesiones, consumo de datos y puntos de acceso.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="custom-card h-100 text-center">
+                <div class="icon-large"><i class="fa-solid fa-book-open"></i></div>
+                <h4 class="card-title mb-3">Datos Secundarios</h4>
+                <p class="card-text">
+                    Artículos científicos, informes oficiales y material académico
+                    utilizados como apoyo para los análisis realizados.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- METODOLOGÍA -->
+<section class="container py-5 fade-in">
+    <h2 class="section-title">Metodología Aplicada</h2>
+
+    <div class="custom-card">
+        <p class="card-text" style="font-size: 1.1rem;">
+            Para el desarrollo del proyecto se combinaron herramientas estadísticas y tecnológicas,
+            aplicando los contenidos vistos en clase a conjuntos de datos reales.
+        </p>
+
+        <ul class="mt-4 card-text">
+            <li class="mb-3">Organización y limpieza de las bases de datos.</li>
+            <li class="mb-3">Análisis descriptivo: promedios, frecuencias y dispersión.</li>
+            <li class="mb-3">Elaboración de gráficos para facilitar la interpretación.</li>
+            <li class="mb-3">Aplicación de distintos tipos de muestreo en la encuesta.</li>
+            <li>Uso de tecnologías web (HTML, CSS, JavaScript y Excel).</li>
+        </ul>
+    </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="container py-5 fade-in" style="background-color: var(--bg-light);">
+    <h2 class="section-title">Equipo de Trabajo</h2>
+
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+            <div class="team-card text-center">
+                <img src="assets/img/jean.jpeg" class="team-avatar" alt="Jean Guillén">
+                <h4 class="card-title">Jean Carlos Guillén</h4>
+                <div class="team-role">Estructuración del proyecto · Backend</div>
+                <p class="card-text mt-3 small">
+                    Encargado de estructuras el proyecto, manejo de bases de datos
+                    e integración de archivos de Excel y pdf en la plataforma.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="team-card text-center">
+                <img src="assets/img/luis.jpeg" class="team-avatar" alt="Luis Lee">
+                <h4 class="card-title">Luis Alberto Lee</h4>
+                <div class="team-role">Diseño UI/UX · Frontend</div>
+                <p class="card-text mt-3 small">
+                    Responsable del diseño visual, estructura del sitio
+                    y experiencia de usuario.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="team-card text-center">
+                <img src="assets/img/m.jpeg" class="team-avatar" alt="María Pérez">
+                <h4 class="card-title">María de los Ángeles Pérez</h4>
+                <div class="team-role">Investigación · Documentación</div>
+                <p class="card-text mt-3 small">
+                    Apoyo en la elaboración de encuestas, análisis conceptual
+                    y redacción metodológica.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- VISIÓN -->
+<section class="container pb-5 fade-in">
+    <div class="custom-card text-center p-5">
+        <div class="icon-large"><i class="fa-solid fa-eye"></i></div>
+        <h4 class="card-title mb-3">Visión del Proyecto</h4>
+        <p class="card-text" style="font-size: 1.1rem;">
+            Este proyecto demuestra cómo la estadística y la probabilidad pueden aplicarse
+            de forma práctica mediante datos reales y herramientas digitales.
+        </p>
+        <p class="card-text mt-3" style="font-size: 1.1rem;">
+            El objetivo es fortalecer la comprensión y el análisis crítico de la información
+            dentro del entorno universitario.
+        </p>
+    </div>
+</section>
+<div class="text-center">
+    <a href="index.html"
+       class="btn btn-green btn-sm back-home-btn">
+        <i class="fa-solid fa-house me-1"></i>
+        Volver al Inicio
+    </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-5 text-center py-4 border-top" style="background: var(--bg-light-alt);">
+    <p class="mb-1 fw-bold">© 2025 — Proyecto de Probabilidad y Estadística</p>
+    <p class="small mb-3">Universidad de Panamá — II Semestre</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

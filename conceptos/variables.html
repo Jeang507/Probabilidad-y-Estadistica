@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Estadísticas</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Variables Estadísticas</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">¿Qué es una Variable Estadística?</h4>
+        <p>
+            Una <strong>variable estadística</strong> es una característica que puede tomar diferentes valores dentro de los elementos de una población o muestra. Las variables permiten clasificar, medir y analizar los datos obtenidos de un experimento o estudio.
+        </p>
+        <p>
+            Dependiendo del tipo de información que representen, las variables se dividen en dos grandes categorías: <strong>cualitativas</strong> y <strong>cuantitativas</strong>. A continuación, exploraremos cada tipo con más detalle.
+        </p>
+
+        <!-- Variables Cualitativas -->
+        <h5 class="fw-semibold mt-4">1. Variables Cualitativas</h5>
+        <p>
+            Las variables <strong>cualitativas</strong> son aquellas que no se expresan numéricamente. En lugar de medir cantidades, estas variables representan categorías o cualidades que pueden describir un grupo de elementos.
+        </p>
+        <p>
+            Existen dos subtipos de variables cualitativas:
+        </p>
+        <ul>
+            <li><strong>Nominales:</strong> No tienen un orden específico. Se utilizan para clasificar datos en categorías sin ningún tipo de jerarquía.</li>
+            <li><strong>Ordinales:</strong> Tienen un orden o jerarquía, pero las diferencias entre las categorías no están necesariamente cuantificadas.</li>
+        </ul>
+        <p>
+            Ejemplos:
+        </p>
+        <ul>
+            <li><strong>Nominales:</strong> Color de ojos (azul, verde, marrón), género (masculino, femenino).</li>
+            <li><strong>Ordinales:</strong> Niveles de satisfacción (bajo, medio, alto), clasificación de estudiantes (A, B, C).</li>
+        </ul>
+
+        <!-- Variables Cuantitativas -->
+        <h5 class="fw-semibold mt-4">2. Variables Cuantitativas</h5>
+        <p>
+            Las variables <strong>cuantitativas</strong> son aquellas que se expresan mediante números. Estas variables miden cantidades y pueden ser utilizadas para realizar cálculos matemáticos. Se dividen en dos tipos:
+        </p>
+        <ul>
+            <li><strong>Discretas:</strong> Toman valores enteros, y su número es finito. Este tipo de variable generalmente representa el conteo de algo.</li>
+            <li><strong>Continuas:</strong> Pueden tomar cualquier valor dentro de un rango determinado y pueden ser medidas con gran precisión.</li>
+        </ul>
+        <p>
+            Ejemplos:
+        </p>
+        <ul>
+            <li><strong>Discretas:</strong> Número de hijos, número de estudiantes en una clase.</li>
+            <li><strong>Continuas:</strong> Peso, altura, tiempo, temperatura.</li>
+        </ul>
+
+        <!-- Video Explicativo -->
+        <div class="video-section my-4">
+            <h4>Video Explicativo</h4>
+            <p>
+                Este video proporciona una explicación clara sobre qué son las variables estadísticas y cómo se clasifican en cualitativas y cuantitativas. Ideal para aprender y entender con ejemplos fáciles.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=nCszHELuwxk" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

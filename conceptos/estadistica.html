@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es la Estadística?</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-chart-column text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="../modulos.html">Conceptos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO CENTRADO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">¿Qué es la Estadística?</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <p>
+            La estadística es una disciplina esencial dentro del conocimiento científico. Su origen se 
+            encuentra en el término latino <em>status</em>, utilizado para registrar información sobre los 
+            territorios y actividades de los Estados. Con el paso del tiempo, su alcance se amplió hasta 
+            convertirse en la ciencia moderna que estudia datos, variabilidad y fenómenos sujetos a 
+            incertidumbre. Hoy, la estadística es un pilar en áreas como ingeniería, economía, salud, 
+            ciencias sociales, educación e inteligencia artificial.
+        </p>
+
+        <p>
+            En su sentido actual, la estadística se encarga de recopilar, organizar, analizar e interpretar 
+            información con el propósito de convertir datos dispersos en conclusiones confiables. Gracias a 
+            sus métodos, es posible comprender comportamientos, evaluar tendencias, justificar decisiones y 
+            validar hipótesis dentro del método científico. Sin estadística, fenómenos como el clima, el 
+            rendimiento académico, los análisis económicos o los modelos de aprendizaje automático serían 
+            imposibles de estudiar con precisión.
+        </p>
+
+        <!-- VIDEO 1 INTEGRADO EN EL CONTENIDO -->
+        <div class="video-section my-4">
+            <h4>Explicación visual</h4>
+            <p>
+                Este video ofrece una introducción clara y dinámica sobre qué es la estadística y cómo se 
+                aplica en la vida real.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=PcFhnJiZ9v8" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+        <h4 class="mt-4">Conceptos esenciales</h4>
+
+        <p>
+            Todo estudio estadístico se fundamenta en tres elementos. La <strong>población</strong> representa 
+            el conjunto total que se desea estudiar, como los habitantes de un país o los estudiantes de una 
+            facultad. Debido a que medir a todos suele ser imposible, se selecciona una <strong>muestra</strong>, un 
+            subconjunto representativo que permite obtener conclusiones con menor costo y tiempo. Finalmente, 
+            las <strong>variables</strong> son las características que se observan o miden, como edad, temperatura, 
+            tiempo de uso de internet, ingresos o nivel académico.
+        </p>
+
+        <p>
+            La correcta definición de población, muestra y variables es crucial, ya que garantiza que el análisis 
+            sea válido, preciso y científicamente riguroso. Un error en cualquiera de estos elementos puede 
+            distorsionar las conclusiones de un estudio.
+        </p>
+
+        <!-- VIDEO 2 INTEGRADO EN EL MEDIO -->
+        <div class="video-section my-4">
+            <h4>Ejemplos explicados</h4>
+            <p>
+                Este video complementa la explicación con ejemplos prácticos y situaciones reales donde la 
+                estadística juega un papel fundamental.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=jMC1p_CV170" target="_blank">
+                Ver explicación práctica <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+        <h4 class="mt-4">¿Cómo se realiza un análisis estadístico?</h4>
+
+        <p>
+            El proceso inicia con una pregunta o problema claramente delimitado. Luego se procede a la 
+            recolección de datos mediante encuestas, experimentos, registros administrativos o sensores 
+            tecnológicos. Una vez obtenidos, los datos pasan por una fase de limpieza y organización donde 
+            se corrigen inconsistencias, se eliminan valores atípicos y se prepara la información para su 
+            análisis.
+        </p>
+
+        <p>
+            Posteriormente, se presentan mediante gráficas, tablas y medidas descriptivas que permiten 
+            visualizar patrones y comprender la estructura del fenómeno. Con base en esto, se elaboran 
+            interpretaciones y conclusiones que sirven para responder la pregunta inicial o para sustentar 
+            decisiones dentro del método científico.
+        </p>
+
+        <h4 class="mt-4">Aplicaciones reales</h4>
+
+        <p>
+            La estadística se encuentra en prácticamente todos los campos de estudio. En medicina permite 
+            evaluar la eficacia de tratamientos; en economía analiza inflación, empleo y comportamiento 
+            financiero; en ingeniería se utiliza para control de calidad y modelado de procesos; en educación 
+            ayuda a medir el rendimiento académico; en ciencias ambientales permite estudiar los cambios 
+            climáticos; y en inteligencia artificial constituye la base matemática de los modelos predictivos 
+            y de aprendizaje automático. Su presencia es tan amplia que prácticamente cualquier decisión basada 
+            en datos utiliza estadística de manera directa o indirecta.
+        </p>
+
+    </div>
+</section>
+
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

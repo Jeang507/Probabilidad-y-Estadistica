@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de la Probabilidad</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Historia de la Probabilidad</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">Antes de la Teoría Matemática</h4>
+        <p>
+            Mucho antes de que la probabilidad fuera formalmente desarrollada como una rama de las matemáticas, las civilizaciones antiguas ya intentaban comprender el azar a través de diferentes medios. Estos intentos se manifestaban en juegos, rituales y creencias religiosas.
+        </p>
+        
+        <!-- Civilizaciones Antiguas -->
+        <h5 class="fw-semibold mt-4">Civilizaciones Antiguas</h5>
+        <ul>
+            <li><strong>Mesopotamia:</strong> Se usaban dados tallados en hueso para juegos y rituales.</li>
+            <li><strong>Egipto:</strong> Juegos como el Senet combinaban azar con creencias religiosas.</li>
+            <li><strong>India:</strong> Los dados aparecen en textos como el Mahabharata.</li>
+            <li><strong>China:</strong> El I Ching utilizaba tiradas para interpretar el destino.</li>
+        </ul>
+
+        <!-- Nacimiento de la Teoría de la Probabilidad -->
+        <h4 class="fw-semibold mt-4">Nacimiento de la Teoría de la Probabilidad</h4>
+        <p>
+            La teoría matemática de la probabilidad comienza a tomar forma en el siglo XVII, cuando el matemático Blaise Pascal y el filósofo Pierre de Fermat resolvieron una serie de problemas relacionados con los juegos de azar, estableciendo las bases de la probabilidad moderna.
+        </p>
+
+        <!-- Evolución Matemática -->
+        <h5 class="fw-semibold mt-4">Evolución Matemática</h5>
+        <p>
+            A lo largo de los siglos, la teoría de la probabilidad fue evolucionando y siendo refinada por grandes matemáticos:
+        </p>
+        <ul>
+            <li><strong>Jacob Bernoulli:</strong> Desarrolló la Ley de los Grandes Números, que establece que cuanto mayor sea el número de ensayos de un experimento aleatorio, más se aproximarán los resultados a la probabilidad teórica.</li>
+            <li><strong>Pierre-Simon Laplace:</strong> Formuló métodos que dieron origen a la estadística bayesiana, la cual permite hacer inferencias probabilísticas sobre eventos desconocidos a partir de datos observados.</li>
+            <li><strong>Carl Friedrich Gauss:</strong> Contribuyó con la famosa distribución normal, que describe cómo los fenómenos naturales y humanos tienden a distribuirse alrededor de un valor medio.</li>
+        </ul>
+
+        <!-- Aplicaciones en Ciencia y Más -->
+        <h5 class="fw-semibold mt-4">De los Juegos a la Ciencia</h5>
+        <p>
+            A lo largo del tiempo, la probabilidad pasó de ser una herramienta para los juegos de azar a convertirse en un pilar fundamental en ciencias como la física, la biología, la economía, la ingeniería, y más. Hoy en día, la probabilidad se utiliza en campos como la inteligencia artificial, la estadística, la predicción de eventos y la toma de decisiones en condiciones de incertidumbre.
+        </p>
+
+        <!-- Videos Explicativos -->
+        <div class="video-section my-4">
+            <h4>Video Explicativo: Historia de la Probabilidad</h4>
+            <p>
+                Este video proporciona una visión general sobre la historia de la probabilidad, desde sus orígenes hasta su desarrollo moderno. Perfecto para comprender el contexto histórico detrás de la teoría de la probabilidad.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=eUVWxvEK7TM" target="_blank">
+                Ver video introductorio <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+        <div class="video-section my-4">
+            <h4>Video Nuestro: Historia de la Probabilidad</h4>
+            <p>
+                Este es el video realizado por nuestro grupo.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=bltIAEJ8x8s&t=5s" target="_blank">
+                Ver video de nuestro grupo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestreo</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Muestreo</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">¿Qué es el Muestreo?</h4>
+        <p>
+            El <strong>muestreo</strong> es el proceso mediante el cual se selecciona un grupo representativo de una población más grande para realizar un estudio o experimento. El propósito del muestreo es obtener conclusiones sobre toda la población sin necesidad de estudiar a cada individuo.
+        </p>
+        <p>
+            Existen dos tipos principales de muestreo: probabilístico y no probabilístico. La elección del método depende del objetivo del estudio, los recursos disponibles y la naturaleza del fenómeno que se desea analizar.
+        </p>
+
+        <!-- Muestreo Probabilístico -->
+        <h5 class="fw-semibold mt-4">1. Muestreo Probabilístico</h5>
+        <p>
+            En el <strong>muestreo probabilístico</strong>, cada elemento de la población tiene una probabilidad conocida y distinta de cero de ser seleccionado. Este tipo de muestreo asegura que la muestra sea representativa de la población y permite calcular márgenes de error.
+        </p>
+
+        <h6 class="fw-semibold mt-4">Muestreo Aleatorio Simple</h6>
+        <p>
+            Todos los elementos de la población tienen la misma probabilidad de ser seleccionados. Este tipo de muestreo es el más básico y no requiere ningún tipo de agrupación.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si se eligen al azar 10 estudiantes de una clase de 100, cada estudiante tiene una probabilidad igual de ser seleccionado.
+        </p>
+
+        <h6 class="fw-semibold mt-4">Muestreo Estratificado</h6>
+        <p>
+            La población se divide en subgrupos o estratos que comparten características similares. Luego, se selecciona una muestra de cada estrato. Esto asegura que todos los grupos relevantes estén representados.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si se quiere estudiar la opinión de los estudiantes sobre un tema en particular, se pueden dividir en estratos según su carrera y luego tomar una muestra de cada carrera.
+        </p>
+
+        <h6 class="fw-semibold mt-4">Muestreo Sistemático</h6>
+        <p>
+            En este método, se selecciona cada enésimo elemento de la población después de un primer elemento elegido al azar. Es un método eficiente si se tiene acceso a una lista de toda la población.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si se tiene una lista de 1000 estudiantes, se seleccionan cada 10º estudiante de la lista después de elegir un estudiante al azar.
+        </p>
+
+        <!-- Muestreo No Probabilístico -->
+        <h5 class="fw-semibold mt-4">2. Muestreo No Probabilístico</h5>
+        <p>
+            En el <strong>muestreo no probabilístico</strong>, la selección de los elementos de la muestra depende del juicio o la accesibilidad del investigador, no de probabilidades conocidas. Este tipo de muestreo no garantiza que la muestra sea representativa de la población, pero es útil cuando no es posible aplicar un muestreo probabilístico.
+        </p>
+
+        <h6 class="fw-semibold mt-4">Por Conveniencia</h6>
+        <p>
+            Se eligen los elementos más accesibles para el investigador. Aunque es rápido y económico, este método puede introducir sesgos significativos.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si un investigador elige entrevistar a las personas que se encuentran en una plaza cerca de su casa, se está utilizando un muestreo por conveniencia.
+        </p>
+
+        <h6 class="fw-semibold mt-4">Intencional</h6>
+        <p>
+            El investigador selecciona a los participantes de acuerdo con características específicas que son relevantes para el estudio. Este método puede ser útil para estudiar grupos particulares.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si un investigador quiere estudiar a personas con una enfermedad rara, seleccionará intencionalmente a individuos que padezcan esa enfermedad.
+        </p>
+
+        <h6 class="fw-semibold mt-4">Bola de Nieve</h6>
+        <p>
+            En este método, los participantes iniciales recomiendan a otros participantes que, a su vez, hacen lo mismo. Es útil cuando se estudian grupos difíciles de acceder.
+        </p>
+        <p class="text-secondary">
+            Ejemplo: Si un investigador está estudiando a personas que viven con una condición médica rara, puede comenzar con un pequeño grupo y pedirles que recomienden a otros con la misma condición.
+        </p>
+
+        <!-- Video de Muestreo -->
+        <div class="video-section my-4">
+            <h4>Explicación visual sobre Muestreo</h4>
+            <p>
+                Este video ofrece una explicación detallada sobre los métodos de muestreo, cómo se aplican y las diferencias clave entre muestreo probabilístico y no probabilístico.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=3LFDVSuaOkw&t=34s" target="_blank">
+                Ver video explicativo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

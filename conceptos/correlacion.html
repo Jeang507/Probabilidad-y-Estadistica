@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coeficiente de Correlación</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ==================== SIDEBAR ==================== -->
+<button class="sidebar-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div id="sidebarConceptos" class="sidebar-conceptos">
+    <a href="estadistica.html">📘 ¿Qué es la Estadística?</a>
+    <a href="tipos_estadistica.html">📊 Tipos de Estadística</a>
+    <a href="variables.html">🏷️ Variables</a>
+    <a href="poblacion_muestra.html">👥 Población y Muestra</a>
+    <a href="muestreo.html">📌 Métodos de Muestreo</a>
+    <a href="probabilidad_intro.html">🎲 Probabilidad Intro</a>
+    <a href="probabilidad_historia.html">⏳ Historia del Azar</a>
+    <a href="tipos_probabilidad.html">🧠 Tipos de Probabilidad</a>
+    <a href="experimentos_eventos.html">⚗️ Experimentos</a>
+    <a href="tipos_eventos.html">🔀 Tipos de Eventos</a>
+    <a href="distribuciones.html">📈 Distribuciones</a>
+    <a href="correlacion.html">🔗 Correlación</a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebarConceptos").classList.toggle("sidebar-open");
+}
+</script>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary sticky-top nav-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <i class="fa-solid fa-brain text-danger me-2"></i> Estadística & Probabilidad – 2025
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link text-light" href="../modulos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== CONTENIDO ==================== -->
+<section class="container py-5 fade-in">
+
+    <!-- BOTÓN VOLVER -->
+    <a href="../modulos.html" class="btn btn-danger mb-4">← Volver a Conceptos</a>
+
+    <!-- TITULO -->
+    <div class="text-center">
+        <h2 class="fw-bold mb-4 title-underline">Coeficiente de Correlación</h2>
+    </div>
+
+    <div class="content-box bg-black bg-opacity-25 p-4 border border-secondary rounded">
+
+        <!-- Introducción -->
+        <h4 class="fw-semibold mt-4">¿Qué es el Coeficiente de Correlación?</h4>
+        <p>
+            El <strong>coeficiente de correlación</strong> es una medida estadística que se utiliza para determinar la fuerza y la dirección de la relación entre dos variables numéricas. El valor del coeficiente de correlación se encuentra entre -1 y 1, lo que indica el tipo de relación entre las variables estudiadas.
+        </p>
+
+        <!-- Valores del Coeficiente -->
+        <h5 class="fw-semibold mt-4">Valores del Coeficiente</h5>
+        <ul>
+            <li><strong>+1:</strong> Correlación positiva perfecta: A medida que una variable aumenta, la otra también lo hace de forma proporcional.</li>
+            <li><strong>0:</strong> No existe relación lineal: No hay una correlación entre las dos variables.</li>
+            <li><strong>-1:</strong> Correlación negativa perfecta: A medida que una variable aumenta, la otra disminuye de forma proporcional.</li>
+        </ul>
+
+        <!-- Interpretación General -->
+        <h5 class="fw-semibold mt-4">Interpretación General</h5>
+        <ul>
+            <li><strong>0.7 a 1.0:</strong> Correlación fuerte: Las variables tienen una relación clara y fuerte.</li>
+            <li><strong>0.4 a 0.6:</strong> Correlación moderada: Las variables tienen una relación moderada.</li>
+            <li><strong>0.1 a 0.3:</strong> Correlación débil: Las variables tienen una relación débil.</li>
+            <li><strong>0:</strong> Ninguna relación lineal: No existe ninguna relación significativa entre las variables.</li>
+        </ul>
+
+        <!-- Ejemplo Simple -->
+        <h5 class="fw-semibold mt-4">Ejemplo Simple</h5>
+        <p>
+            Imagina que estamos midiendo el tiempo de estudio y las calificaciones obtenidas por un grupo de estudiantes. Si a medida que aumentan las horas de estudio, las calificaciones también aumentan, esto indicaría una <strong>correlación positiva</strong>. En este caso, el coeficiente de correlación estaría cerca de +1.
+        </p>
+
+        <p>
+            Sin embargo, si estamos midiendo la velocidad de un automóvil y el tiempo que tarda en llegar a su destino, podemos observar que a mayor velocidad, menor es el tiempo del viaje. Este sería un ejemplo de <strong>correlación negativa</strong>, donde el coeficiente de correlación estaría cerca de -1.
+        </p>
+
+        <!-- Video Explicativo -->
+        <div class="video-section my-4">
+            <h4>Explicación visual sobre el Coeficiente de Correlación</h4>
+            <p>
+                Este video proporciona una explicación detallada sobre el coeficiente de correlación, mostrando ejemplos prácticos y cómo interpretar los diferentes valores del coeficiente.
+            </p>
+            <a class="video-btn" href="https://www.youtube.com/watch?v=MCra1Rttv9k" target="_blank">
+                Ver video explicativo <i class="fa-solid fa-play ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-5 text-center py-3 border-top border-secondary">
+    <p class="mb-1">© 2025 — Proyecto de Probabilidad y Estadística</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
