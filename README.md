@@ -4,9 +4,6 @@ Este repositorio contiene el Proyecto Final de la asignatura Estadística y Prob
 
 El proyecto funciona completamente en el navegador.
 
-### Enlace del proyecto:
-https://jeang507.github.io/Probabilidad-y-Estad-stica/
-
 ## Objetivos
 
 Aplicar conceptos fundamentales de estadística y probabilidad.
@@ -21,29 +18,29 @@ Mantener una estructura clara y ordenada acorde a un proyecto académico.
 
 ## Contenido del Proyecto
 
-Módulos Conceptuales
+### Módulos Conceptuales
 
 Se incluyen módulos teóricos desarrollados en HTML que cubren los principales temas del curso:
 
 Estadística y tipos de estadística
 
-Variables estadísticas
+- Variables estadísticas
 
-Población y muestra
+- Población y muestra
 
-Métodos de muestreo
+- Métodos de muestreo
 
-Introducción e historia de la probabilidad
+- Introducción e historia de la probabilidad
 
-Tipos de probabilidad
+- Tipos de probabilidad
 
-Experimentos y eventos
+- Experimentos y eventos
 
-Tipos de eventos
+- Tipos de eventos
 
-Distribuciones de probabilidad
+- Distribuciones de probabilidad
 
-Correlación
+- Correlación
 
 Cada módulo contiene explicaciones claras, ejemplos y enlaces a material de apoyo.
 
@@ -53,41 +50,41 @@ El proyecto reúne 16 trabajos realizados durante el semestre, organizados dentr
 
 Cada trabajo cuenta con:
 
-Archivo PDF
+- Archivo PDF
 
-Visualización en HTML
+- Visualización en HTML
 
-Navegación entre trabajos
+- Navegación entre trabajos
 
 ### Encuestas
 
 Se desarrollaron tres encuestas mediante formularios web que permiten:
 
-Validación de datos
+- Validación de datos
 
-Almacenamiento de respuestas usando LocalStorage
+- Almacenamiento de respuestas usando LocalStorage
 
-Visualización de respuestas
+- Visualización de respuestas
 
-Exportación de resultados a archivos Excel
+- Exportación de resultados a archivos Excel
 
-Análisis y Paneles de Datos
+### Análisis y Paneles de Datos
 
 El proyecto incluye diferentes paneles para el análisis de información:
 
-Data Gráfica: visualización dinámica de archivos Excel
+- Data Gráfica: visualización dinámica de archivos Excel
 
-Data Internet: análisis de datos relacionados con conectividad
+- Data Internet: análisis de datos relacionados con conectividad
 
-Base de Datos: datasets utilizados para los análisis estadísticos
+- Base de Datos: datasets utilizados para los análisis estadísticos
 
 Las tablas permiten cambiar entre hojas, manejar grandes volúmenes de datos y exportar la información.
 
-Gráficas
+### Gráficas
 
 Se incluyen múltiples gráficas estadísticas en formato PNG, utilizadas como apoyo visual para la interpretación de los datos analizados en el proyecto.
 
-## Tecnologías Utilizadas
+### Tecnologías Utilizadas
 
 HTML5
 
@@ -108,19 +105,19 @@ Ejecución local
 
 Clonar el repositorio:
 
-git clone https://github.com/jeang507/Probabilidad-y-Estad-stica.git
+git clone https://github.com/jeang507/Probabilidad-y-Estadistica.git
 
 
 Abrir el archivo index.html en el navegador.
 
-GitHub Pages
+### GitHub Pages
 
 El proyecto está publicado y disponible en:
-https://jeang507.github.io/Probabilidad-y-Estad-stica/
+https://jeang507.github.io/Probabilidad-y-Estadistica/
 
 ## Contexto Académico
 
 Proyecto desarrollado como trabajo final universitario para la asignatura Estadística y Probabilidad, integrando los contenidos teóricos y prácticos vistos durante el semestre.
 
-Estado del Proyecto
+### Estado del Proyecto
 Proyecto finalizado y funcional.
