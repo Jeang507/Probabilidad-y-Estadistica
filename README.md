@@ -84,6 +84,37 @@ Las tablas permiten cambiar entre hojas, manejar grandes volúmenes de datos y e
 
 Se incluyen múltiples gráficas estadísticas en formato PNG, utilizadas como apoyo visual para la interpretación de los datos analizados en el proyecto.
 
+## Estructura del Proyecto
+
+El proyecto está organizado de manera modular para facilitar la navegación, el mantenimiento y la comprensión del contenido.
+
+- **assets/**  
+  Contiene los recursos estáticos del proyecto.
+  - **css/**: estilos generales del sitio (`style.css`)
+  - **js/**: scripts JavaScript para manejo de datos, gráficas, encuestas y lógica general
+  - **data/**: archivos de datos (Excel y recursos usados para gráficas)
+  - **img/**: imágenes utilizadas en el proyecto y del equipo
+
+- **conceptos/**  
+  Incluye los módulos teóricos desarrollados, relacionados con estadística y probabilidad.
+
+- **trabajos/**  
+  Contiene los trabajos académicos y actividades prácticas del curso.
+
+- **Archivos HTML principales**  
+  - `index.html`: página principal del proyecto  
+  - `about.html`: información general  
+  - `modulos.html`: acceso a los módulos teóricos  
+  - `encuesta.html`: sección de encuestas  
+  - `datos.html`: visualización de datos  
+  - `analisis.html`: análisis estadístico  
+  - `base_datos.html`: sección relacionada con bases de datos  
+  - `referencia.html`: referencias y fuentes
+
+- **README.md**  
+  Documento descriptivo del proyecto.
+
+
 ### Tecnologías Utilizadas
 
 - HTML5
