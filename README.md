@@ -84,43 +84,6 @@ Las tablas permiten cambiar entre hojas, manejar grandes volúmenes de datos y e
 
 Se incluyen múltiples gráficas estadísticas en formato PNG, utilizadas como apoyo visual para la interpretación de los datos analizados en el proyecto.
 
-### Estructura del Proyecto
-
-PROYECTOFINALPROBABILIDAD/
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   ├── almacenamiento.js
-│   │   ├── base_datos.js
-│   │   ├── data_grafica.js
-│   │   ├── data_internet.js
-│   │   ├── encuesta.js
-│   │   ├── estructuraEncuesta.js
-│   │   ├── main.js
-│   │   └── trabajo11.js
-│   ├── data/
-│   │   └── archivos Excel y gráficas
-│   └── img/
-│       └── imágenes del equipo
-│
-├── conceptos/
-│   └── módulos teóricos
-│
-├── trabajos/
-│   └── trabajos académicos
-│
-├── index.html
-├── about.html
-├── modulos.html
-├── encuesta.html
-├── datos.html
-├── analisis.html
-├── base_datos.html
-├── referencia.html
-└── README.md
-
 ### Tecnologías Utilizadas
 
 - HTML5
