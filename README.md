@@ -6,15 +6,15 @@ El proyecto funciona completamente en el navegador.
 
 ## Objetivos
 
-Aplicar conceptos fundamentales de estadística y probabilidad.
+- Aplicar conceptos fundamentales de estadística y probabilidad.
 
-Analizar datos obtenidos a través de encuestas.
+- Analizar datos obtenidos a través de encuestas.
 
-Visualizar información estadística mediante tablas y gráficas.
+- Visualizar información estadística mediante tablas y gráficas.
 
-Integrar teoría y práctica en un solo proyecto.
+- Integrar teoría y práctica en un solo proyecto.
 
-Mantener una estructura clara y ordenada acorde a un proyecto académico.
+- Mantener una estructura clara y ordenada acorde a un proyecto académico.
 
 ## Contenido del Proyecto
 
@@ -84,21 +84,58 @@ Las tablas permiten cambiar entre hojas, manejar grandes volúmenes de datos y e
 
 Se incluyen múltiples gráficas estadísticas en formato PNG, utilizadas como apoyo visual para la interpretación de los datos analizados en el proyecto.
 
+### Estructura del Proyecto
+
+PROYECTOFINALPROBABILIDAD/
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   ├── almacenamiento.js
+│   │   ├── base_datos.js
+│   │   ├── data_grafica.js
+│   │   ├── data_internet.js
+│   │   ├── encuesta.js
+│   │   ├── estructuraEncuesta.js
+│   │   ├── main.js
+│   │   └── trabajo11.js
+│   ├── data/
+│   │   └── archivos Excel y gráficas
+│   └── img/
+│       └── imágenes del equipo
+│
+├── conceptos/
+│   └── módulos teóricos
+│
+├── trabajos/
+│   └── trabajos académicos
+│
+├── index.html
+├── about.html
+├── modulos.html
+├── encuesta.html
+├── datos.html
+├── analisis.html
+├── base_datos.html
+├── referencia.html
+└── README.md
+
 ### Tecnologías Utilizadas
 
-HTML5
+- HTML5
 
-CSS3
+- CSS3
 
-JavaScript
+- JavaScript
 
-Bootstrap 5
+- Bootstrap 5
 
-Font Awesome
+- Font Awesome
 
-SheetJS (XLSX)
+- SheetJS (XLSX)
 
-LocalStorage
+- LocalStorage
 
 ### Ejecución del Proyecto
 Ejecución local
@@ -106,7 +143,6 @@ Ejecución local
 Clonar el repositorio:
 
 git clone https://github.com/jeang507/Probabilidad-y-Estadistica.git
-
 
 Abrir el archivo index.html en el navegador.
 
